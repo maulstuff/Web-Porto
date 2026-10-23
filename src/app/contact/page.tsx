@@ -60,7 +60,8 @@ export default function ContactPage() {
             <p className="contact-label">FOLLOW MY WORK</p>
             <div className="contact-socials">
               <a href="https://dribbble.com/mlstvff" target="_blank" rel="noreferrer">Dribbble <ArrowUpRight size={12} /></a>
-              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={12} /></a>
+              <a href="https://instagram.com/mlstvff" target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={12} /></a>
+              <a href="https://id.linkedin.com/in/maulstuff" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={12} /></a>
             </div>
           </div>
           <div className="contact-availability"><span className="availability-dot" /><p>Open to discussing selected projects and opportunities.</p></div>

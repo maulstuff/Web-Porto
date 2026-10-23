@@ -59,7 +59,7 @@ function Divider() {
   return <div className="section-divider" aria-hidden="true" />;
 }
 
-function PillLink({ children = "Let’s Discuss", dark = false, href = "#contact" }: { children?: React.ReactNode; dark?: boolean; href?: string }) {
+function PillLink({ children = "Let’s Discuss", dark = false, href = "/contact" }: { children?: React.ReactNode; dark?: boolean; href?: string }) {
   return <a className={`pill-link ${dark ? "pill-dark" : ""}`} href={href}>{children}<span className="pill-icon"><ArrowUpRight size={13} /></span></a>;
 }
 
@@ -96,7 +96,7 @@ export default function Home() {
       });
     }, { threshold: 0.08, rootMargin: "0px 0px -8% 0px" });
 
-    [...sections, ...revealItems].forEach((item) => {
+    [...sections, ...revealItems].forEach((item, index) => {
       item.classList.add("scroll-reveal");
       if (revealItems.includes(item)) {
         const siblings = item.parentElement ? Array.from(item.parentElement.children) : [];
@@ -258,25 +258,25 @@ export default function Home() {
           </div>
           <div className="process-grid">
             <article className="process-card">
-              <div className="process-card-top"><span>01</span><span className="process-symbol">↗</span></div>
+              <div className="process-card-top"><span>01</span>{/*<span className="process-symbol">↗</span>*/}</div>
               <h3>Discover</h3>
               <p>Understand the people, goals, and challenges behind the product before jumping into solutions.</p>
               <div className="process-output"><span>KEY OUTPUT</span><strong>Research & insights</strong></div>
             </article>
             <article className="process-card">
-              <div className="process-card-top"><span>02</span><span className="process-symbol">⌁</span></div>
+              <div className="process-card-top"><span>02</span>{/*<span className="process-symbol">⌁</span>*/}</div>
               <h3>Define</h3>
               <p>Turn what we learn into a clear problem statement, user flows, and a focused product direction.</p>
               <div className="process-output"><span>KEY OUTPUT</span><strong>Flows & structure</strong></div>
             </article>
             <article className="process-card process-card-featured">
-              <div className="process-card-top"><span>03</span><span className="process-symbol">✳</span></div>
+              <div className="process-card-top"><span>03</span>{/*<span className="process-symbol">✳</span>*/}</div>
               <h3>Design</h3>
               <p>Explore concepts and build a thoughtful interface with clear hierarchy, useful interactions, and a consistent visual language.</p>
               <div className="process-output"><span>KEY OUTPUT</span><strong>UI & prototype</strong></div>
             </article>
             <article className="process-card">
-              <div className="process-card-top"><span>04</span><span className="process-symbol">↻</span></div>
+              <div className="process-card-top"><span>04</span>{/*<span className="process-symbol">↻</span>*/}</div>
               <h3>Validate & refine</h3>
               <p>Test key journeys, learn from feedback, and refine the experience before handing it over for development.</p>
               <div className="process-output"><span>KEY OUTPUT</span><strong>Tested handoff</strong></div>
@@ -335,7 +335,7 @@ export default function Home() {
                 </div>
                 <div className="footer-right-group">
                   <div className="footer-links"><h4>Explore</h4><a href="#home">Home</a><a href="/about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="/contact">Contact</a></div>
-                  <div className="footer-connect"><h4>Let’s connect</h4><div><a href="https://dribbble.com/mlstvff" target="_blank" rel="noreferrer">Dribbble <ArrowUpRight size={12} /></a></div></div>
+                  <div className="footer-connect"><h4>Let’s connect</h4><div><a href="https://dribbble.com/mlstvff" target="_blank" rel="noreferrer">Dribbble <ArrowUpRight size={12} /></a><a href="https://instagram.com/mlstvff" target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={12} /></a><a href="https://id.linkedin.com/in/maulstuff" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={12} /></a></div></div>
                 </div>
               </div>
               <div className="footer-bottom"><span>© {new Date().getFullYear()} MLSTVFF. All rights reserved.</span></div>

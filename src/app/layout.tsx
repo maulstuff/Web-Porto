@@ -1,8 +1,15 @@
 
 import type { Metadata } from "next";
 import "./globals.css";
+import { Instrument_Sans } from "next/font/google";
 import SmoothScroll from "@/components/SmoothScroll";
 import PageScrollReveal from "@/components/PageScrollReveal";
+
+const instrumentSans = Instrument_Sans({
+  subsets: ["latin"],
+  variable: "--font-instrument-sans",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "MLSTVFF — UI/UX Designer",
@@ -17,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={instrumentSans.variable}>
         <SmoothScroll>
           <PageScrollReveal />
           {children}
