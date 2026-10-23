@@ -107,10 +107,27 @@ export default function AboutPage() {
       <section data-scroll-reveal className="about-page-cta">
         <p>HAVE AN IDEA IN MIND?</p>
         <h2>Let’s make something meaningful.</h2>
-        <div className="about-page-cta-actions">
-          <Link href="/#contact">Let’s Discuss <span><ArrowUpRight size={16} /></span></Link>
-          <a className="about-page-cv-link" href="/cv-maulana-akbar-kusuma.pdf" download>Download CV <ArrowUpRight size={14} /></a>
-        </div>
+        
+<div className="about-cta-buttons">
+  <a href="/contact" className="about-cta-button about-cta-primary">
+    <span>Let’s Discuss</span>
+    <span className="about-cta-icon">
+      <ArrowUpRight size={25} strokeWidth={2} />
+    </span>
+  </a>
+
+  <a
+    href="/CV - Maulana Akbar Kusuma 2026 - English.pdf"
+    download
+    className="about-cta-button about-cta-secondary"
+  >
+    <span>Download CV</span>
+    <span className="about-cta-icon">
+      <ArrowUpRight size={25} strokeWidth={2} />
+    </span>
+  </a>
+</div>
+
       </section>
 
       <footer className="about-page-footer">

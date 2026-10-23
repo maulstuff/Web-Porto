@@ -147,12 +147,12 @@ export default function Home() {
         <div className="hero-glow hero-glow-blue" />
         <header className="topbar">
           <a className="brand" href="#home" aria-label="Home">MLSTVFF   <Image
-    src="/images/mlstvff-mark.svg"
-    alt=""
-    width={16}
-    height={16}
-    className="brand-asterisk"
-  /></a>
+            src="/images/mlstvff-mark.svg"
+            alt=""
+            width={16}
+            height={16}
+            className="brand-asterisk"
+          /></a>
           <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Close menu" : "Open menu"}>
             {menuOpen ? <X size={19} /> : <Menu size={19} />}
           </button>
@@ -169,12 +169,12 @@ export default function Home() {
         <div className="hero-content">
           <motion.h1 initial={{ opacity: 0, y: 25 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: "easeOut" }}>
             MLSTVFF<Image
-  src="/images/mlstvff-mark.svg"
-  alt=""
-  width={64}
-  height={64}
-  className="hero-asterisk"
-/>
+              src="/images/mlstvff-mark.svg"
+              alt=""
+              width={64}
+              height={64}
+              className="hero-asterisk"
+            />
           </motion.h1>
           <a className="hero-down" href="#about" aria-label="Scroll to about"><ArrowDown size={15} /></a>
           <div className="hero-bottom">
@@ -195,7 +195,7 @@ export default function Home() {
         <section className="about section-pad" id="about">
           <Divider />
           <div className="about-grid">
-            <div className="about-label"><SectionMarker label="ABOUT ME" /><PillLink dark /></div>
+            <div className="about-label"><SectionMarker label="ABOUT ME" />{/* <PillLink dark /> */}</div>
             <div className="about-copy">
               <h2>I’m Maulana Akbar Kusuma, a UI/UX designer from Indonesia. I turn complex ideas into clear, intuitive digital experiences through thoughtful research and visual design.</h2>
               <div className="about-actions"><a className="text-link" href="/about">More about me <ArrowUpRight size={13} /></a><a className="cv-download" href="/cv-maulana-akbar-kusuma.pdf" download>Download CV <ArrowUpRight size={13} /></a></div>
@@ -366,7 +366,7 @@ export default function Home() {
                 <div className="footer-about">
                   <a className="brand footer-brand" href="#home">MLSTVFF<AsteriskMark className="hero-asterisk" /></a>
                   <p>Turning ideas into clear, useful digital experiences through thoughtful UI/UX and product design.</p>
-                  <a className="pill-link footer-cv-link" href="/cv-maulana-akbar-kusuma.pdf" download>Download CV <span className="pill-icon"><ArrowUpRight size={13} /></span></a>
+                  <a className="pill-link footer-cv-link" href="/CV - Maulana Akbar Kusuma 2026 - English.pdf" download>Download CV <span className="pill-icon"><ArrowUpRight size={13} /></span></a>
                 </div>
                 <div className="footer-right-group">
                   <div className="footer-links"><h4>Explore</h4><a href="#home">Home</a><a href="/about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="/contact">Contact</a></div>
