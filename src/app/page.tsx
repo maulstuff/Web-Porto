@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ArrowDown, ArrowUpRight, Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 
+
 const services = [
   { n: "01", title: "UX RESEARCH & STRATEGY", text: "Understanding user needs through research, identifying pain points, and turning insights into a clear product strategy. I use these findings to shape user journeys and prioritize the problems that matter most.", kind: "text" },
   { n: "02", title: "UI DESIGN", text: "Designing clean, accessible interfaces with thoughtful hierarchy, typography, and visual consistency. Every screen is crafted to feel intuitive, communicate clearly, and support users across different devices.", kind: "text" },
@@ -55,6 +56,28 @@ function SectionMarker({ label }: { label: string }) {
   );
 }
 
+function AsteriskMark({ className = "" }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <g
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="square"
+      >
+        <path d="M20 2V38" />
+        <path d="M2 20H38" />
+        <path d="M7.3 7.3L32.7 32.7" />
+        <path d="M32.7 7.3L7.3 32.7" />
+      </g>
+    </svg>
+  );
+}
 function Divider() {
   return <div className="section-divider" aria-hidden="true" />;
 }
@@ -123,7 +146,13 @@ export default function Home() {
         <div className="hero-glow hero-glow-green" />
         <div className="hero-glow hero-glow-blue" />
         <header className="topbar">
-          <a className="brand" href="#home" aria-label="Home">MLSTVFF<span>✳</span></a>
+          <a className="brand" href="#home" aria-label="Home">MLSTVFF   <Image
+    src="/images/mlstvff-mark.svg"
+    alt=""
+    width={16}
+    height={16}
+    className="brand-asterisk"
+  /></a>
           <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Close menu" : "Open menu"}>
             {menuOpen ? <X size={19} /> : <Menu size={19} />}
           </button>
@@ -139,7 +168,13 @@ export default function Home() {
 
         <div className="hero-content">
           <motion.h1 initial={{ opacity: 0, y: 25 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: "easeOut" }}>
-            MLSTVFF<span className="hero-asterisk">✳</span>
+            MLSTVFF<Image
+  src="/images/mlstvff-mark.svg"
+  alt=""
+  width={64}
+  height={64}
+  className="hero-asterisk"
+/>
           </motion.h1>
           <a className="hero-down" href="#about" aria-label="Scroll to about"><ArrowDown size={15} /></a>
           <div className="hero-bottom">
@@ -329,7 +364,7 @@ export default function Home() {
             <div className="footer-card">
               <div className="footer-top">
                 <div className="footer-about">
-                  <a className="brand footer-brand" href="#home">MLSTVFF<span>✳</span></a>
+                  <a className="brand footer-brand" href="#home">MLSTVFF<AsteriskMark className="hero-asterisk" /></a>
                   <p>Turning ideas into clear, useful digital experiences through thoughtful UI/UX and product design.</p>
                   <a className="pill-link footer-cv-link" href="/cv-maulana-akbar-kusuma.pdf" download>Download CV <span className="pill-icon"><ArrowUpRight size={13} /></span></a>
                 </div>

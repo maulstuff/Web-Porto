@@ -591,3 +591,39 @@ html.js-scroll-reveal .about-copy.scroll-reveal.is-revealed { opacity: 1 !import
   .gallery-lightbox-close { top: 12px; right: 12px; }
 }
 @media (prefers-reduced-motion: reduce) { .gallery-lightbox { animation: none; } .detail-gallery-card-image img, .detail-gallery-expand { transition: none; } }
+/* Consistent logo mark across browsers and devices */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.brand-asterisk {
+  width: 0.8em;
+  height: 0.8em;
+  color: var(--green);
+  flex-shrink: 0;
+}
+
+.hero-asterisk {
+  display: inline-block;
+  width: 0.65em;
+  height: 0.65em;
+  color: var(--green);
+  vertical-align: top;
+  margin-left: 0.04em;
+  transform: translateY(-0.08em);
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .brand-asterisk {
+    width: 0.85em;
+    height: 0.85em;
+  }
+
+  .hero-asterisk {
+    width: 0.45em;
+    height: 0.45em;
+  }
+}
