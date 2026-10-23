@@ -3,6 +3,7 @@ import Image from "next/image";
 import { absoluteUrl, SITE_NAME } from "@/lib/site";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import ProjectGallery from "@/components/ProjectGallery";
 
 const projects = {
   "raven-claw": {
@@ -117,6 +118,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
       <section data-scroll-reveal className="detail-story"><div className="detail-section-label">01 / THE CHALLENGE</div><h2>{project.challenge}</h2></section>
       <section data-scroll-reveal className="detail-story detail-story-split"><div className="detail-section-label">02 / THE APPROACH</div><div><h2>Thoughtful by design.</h2><p>{project.approach}</p></div></section>
       <section data-scroll-reveal className="detail-outcomes"><div className="detail-section-label">03 / KEY OUTCOMES</div><div className="detail-outcome-list">{project.outcomes.map((outcome, i) => <div key={outcome}><span>0{i + 1}</span><strong>{outcome}</strong><ArrowUpRight size={18} /></div>)}</div></section>
+      <ProjectGallery projectTitle={project.title} />
       <section data-scroll-reveal className="detail-next"><p>HAVE A PROJECT IN MIND?</p><h2>Let’s make something meaningful.</h2><Link href="/#contact">Let’s Discuss <span><ArrowUpRight size={16} /></span></Link></section>
       <footer className="detail-footer"><Link className="detail-brand" href="/">MLSTVFF<span>*</span></Link><Link href="/#projects"><ArrowLeft size={15} /> Back to all projects</Link></footer>
     </main>
