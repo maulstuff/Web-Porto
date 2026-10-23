@@ -1,8 +1,11 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function PageScrollReveal() {
+  const pathname = usePathname();
+
   useEffect(() => {
     const elements = Array.from(
       document.querySelectorAll<HTMLElement>("[data-scroll-reveal]")
@@ -15,17 +18,25 @@ export default function PageScrollReveal() {
     ).matches;
 
     if (reduceMotion || !("IntersectionObserver" in window)) {
-      elements.forEach((element) => element.classList.add("is-revealed"));
+      elements.forEach((element) => {
+        element.classList.remove("page-scroll-reveal");
+        element.classList.add("is-revealed");
+      });
       return;
     }
 
-    elements.forEach((element) => element.classList.add("page-scroll-reveal"));
+    // Reset reveal state whenever the route changes, so newly rendered pages
+    // are observed after client-side navigation as well as on a hard refresh.
+    elements.forEach((element) => {
+      element.classList.remove("is-revealed");
+      element.classList.add("page-scroll-reveal");
+    });
 
     const observer = new IntersectionObserver(
       (entries, currentObserver) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("is-revealed");
+            (entry.target as HTMLElement).classList.add("is-revealed");
             currentObserver.unobserve(entry.target);
           }
         });
@@ -39,7 +50,7 @@ export default function PageScrollReveal() {
     elements.forEach((element) => observer.observe(element));
 
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   return null;
 }
