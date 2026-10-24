@@ -178,7 +178,7 @@ export default function Home() {
 >
   <Image
     src="/images/mlstvff-logo-white.svg"
-    alt="MLSTVFF"
+    alt="Amertha"
     width={1036}
     height={251}
     priority
@@ -190,7 +190,7 @@ export default function Home() {
           <div className="hero-bottom">
             <div className="stats" aria-label="Portfolio overview">
               <div><strong><CountUp value={projects.length} /></strong><span>Featured projects</span></div>
-              <div><strong><CountUp value={services.length} /></strong><span>Service areas</span></div>
+              <div><strong><CountUp value={services.length} /></strong><span>Clients & Collaborations</span></div>
               <div><strong><CountUp value={4} /></strong><span>Design stages</span></div>
             </div>
             <div className="hero-intro">

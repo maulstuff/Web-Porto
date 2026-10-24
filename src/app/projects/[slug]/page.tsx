@@ -107,8 +107,8 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
   <Image
     src="/images/mlstvff-logo-black.svg"
     alt="Amertha"
-    width={150}
-    height={44}
+    width={120}
+    height={30}
     priority
     className="about-page-logo"
   />

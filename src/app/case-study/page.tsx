@@ -49,7 +49,16 @@ export default function CaseStudyPage() {
   return (
     <main className="study-page">
       <header className="study-nav">
-        <Link href="/" className="study-wordmark" aria-label="MLSTVFF home">MLSTVFF<span>*</span></Link>
+      <Link className="about-page-brand" href="/" aria-label="Amertha - Home">
+  <Image
+    src="/images/mlstvff-logo-black.svg"
+    alt="Amertha"
+    width={120}
+    height={30}
+    priority
+    className="about-page-logo"
+  />
+</Link>
         <Link href="/#case-study" className="study-back"><ArrowLeft size={14} /> Back to portfolio</Link>
       </header>
 
@@ -97,7 +106,7 @@ export default function CaseStudyPage() {
         <div className="study-actions"><Link href="/#projects" className="study-primary">Explore more projects <ArrowUpRight size={15} /></Link><Link href="/#contact" className="study-secondary">Let’s discuss a project <ArrowUpRight size={15} /></Link></div>
       </section>
 
-      <footer className="study-footer"><Link href="/" className="study-wordmark">MLSTVFF<span>*</span></Link><Link href="/#case-study" className="study-back"><ArrowLeft size={14} /> Back to portfolio</Link></footer>
+      <footer className="contact-page-footer"><span>© {new Date().getFullYear()} AMERTHA. All rights reserved.</span><Link href="/">Back to home <ArrowUpRight size={12} /></Link></footer>
     </main>
   );
 }

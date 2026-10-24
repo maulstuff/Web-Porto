@@ -45,8 +45,8 @@ export default function ContactPage() {
   <Image
     src="/images/mlstvff-logo-black.svg"
     alt="Amertha"
-    width={150}
-    height={44}
+    width={120}
+    height={30}
     priority
     className="about-page-logo"
   />
@@ -102,7 +102,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <footer className="contact-page-footer"><span>© {new Date().getFullYear()} AMERTHA. All rights reserved.</span><Link href="/">Back to portfolio <ArrowUpRight size={12} /></Link></footer>
+      <footer className="contact-page-footer"><span>© {new Date().getFullYear()} AMERTHA. All rights reserved.</span><Link href="/">Back to home <ArrowUpRight size={12} /></Link></footer>
     </main>
   );
 }
