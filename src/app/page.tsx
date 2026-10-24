@@ -146,13 +146,15 @@ export default function Home() {
         <div className="hero-glow hero-glow-green" />
         <div className="hero-glow hero-glow-blue" />
         <header className="topbar">
-          <a className="brand" href="#home" aria-label="Home">MLSTVFF   <Image
-            src="/images/mlstvff-mark.svg"
-            alt=""
-            width={16}
-            height={16}
-            className="brand-asterisk"
-          /></a>
+          <a href="#home" className="brand" aria-label="MLSTVFF Home">
+  <Image
+    src="/images/mlstvff-logo-white.svg"
+    alt="MLSTVFF"
+    width={120}
+    height={30}
+    priority
+  />
+</a>
           <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Close menu" : "Open menu"}>
             {menuOpen ? <X size={19} /> : <Menu size={19} />}
           </button>
@@ -167,16 +169,24 @@ export default function Home() {
         </header>
 
         <div className="hero-content">
-          <motion.h1 initial={{ opacity: 0, y: 25 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: "easeOut" }}>
-            MLSTVFF<Image
-              src="/images/mlstvff-mark.svg"
-              alt=""
-              width={64}
-              height={64}
-              className="hero-asterisk"
-            />
-          </motion.h1>
-          <a className="hero-down" href="#about" aria-label="Scroll to about"><ArrowDown size={15} /></a>
+
+<motion.h1
+  className="hero-logo-heading"
+  initial={{ opacity: 0, y: 25 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+>
+  <Image
+    src="/images/mlstvff-logo-white.svg"
+    alt="MLSTVFF"
+    width={1036}
+    height={251}
+    priority
+    className="hero-logo-image"
+  />
+</motion.h1>
+
+          {/*<a className="hero-down" href="#footer" aria-label="Scroll to about"><ArrowDown size={15} /></a>*/}
           <div className="hero-bottom">
             <div className="stats" aria-label="Portfolio overview">
               <div><strong><CountUp value={projects.length} /></strong><span>Featured projects</span></div>
@@ -364,7 +374,17 @@ export default function Home() {
             <div className="footer-card">
               <div className="footer-top">
                 <div className="footer-about">
-                  <a className="brand footer-brand" href="#home">MLSTVFF<AsteriskMark className="hero-asterisk" /></a>
+                  
+<a className="brand footer-brand" href="#home" aria-label="MLSTVFF — Home">
+  <Image
+    src="/images/mlstvff-logo-black.svg"
+    alt="MLSTVFF"
+    width={180}
+    height={44}
+    className="footer-logo-image"
+  />
+</a>
+
                   <p>Turning ideas into clear, useful digital experiences through thoughtful UI/UX and product design.</p>
                   <a className="pill-link footer-cv-link" href="/CV - Maulana Akbar Kusuma 2026 - English.pdf" download>Download CV <span className="pill-icon"><ArrowUpRight size={13} /></span></a>
                 </div>
@@ -373,9 +393,9 @@ export default function Home() {
                   <div className="footer-connect"><h4>Let’s connect</h4><div><a href="https://dribbble.com/mlstvff" target="_blank" rel="noreferrer">Dribbble <ArrowUpRight size={12} /></a><a href="https://instagram.com/mlstvff" target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={12} /></a><a href="https://id.linkedin.com/in/maulstuff" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={12} /></a></div></div>
                 </div>
               </div>
-              <div className="footer-bottom"><span>© {new Date().getFullYear()} MLSTVFF. All rights reserved.</span></div>
+              <div className="footer-bottom"><span>© {new Date().getFullYear()} Amertha. All rights reserved.</span></div>
             </div>
-            <div className="footer-wordmark" aria-hidden="true">MLSTVFF</div>
+            <div className="footer-wordmark" aria-hidden="true">AMERTHA</div>
           </div>
         </footer>
       </div>

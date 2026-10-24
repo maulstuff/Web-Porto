@@ -77,7 +77,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: `${title} | ${SITE_NAME}`,
       description,
       url: canonical,
-      images: [{ url: shareImage, width: 1200, height: 630, alt: `${project.title} case study by MLSTVFF` }],
+      images: [{ url: shareImage, width: 1200, height: 630, alt: `${project.title} case study by MAULANA AKBAR KUSUMA` }],
     },
     twitter: {
       card: "summary_large_image",
@@ -103,7 +103,16 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
   return (
     <main className="project-detail-page">
       <header className="detail-nav">
-        <Link className="detail-brand" href="/">MLSTVFF<span>*</span></Link>
+        <Link className="about-page-brand" href="/" aria-label="Amertha - Home">
+  <Image
+    src="/images/mlstvff-logo-black.svg"
+    alt="Amertha"
+    width={150}
+    height={44}
+    priority
+    className="about-page-logo"
+  />
+</Link>
         <Link className="detail-back" href="/#projects"><ArrowLeft size={15} /> All projects</Link>
       </header>
       <section data-scroll-reveal className="detail-hero">
@@ -120,7 +129,10 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
       <section data-scroll-reveal className="detail-outcomes"><div className="detail-section-label">03 / KEY OUTCOMES</div><div className="detail-outcome-list">{project.outcomes.map((outcome, i) => <div key={outcome}><span>0{i + 1}</span><strong>{outcome}</strong><ArrowUpRight size={18} /></div>)}</div></section>
       <ProjectGallery projectTitle={project.title} />
       <section data-scroll-reveal className="detail-next"><p>HAVE A PROJECT IN MIND?</p><h2>Let’s make something meaningful.</h2><Link href="/contact">Let’s Discuss <span><ArrowUpRight size={16} /></span></Link></section>
-      <footer className="detail-footer"><Link className="detail-brand" href="/">MLSTVFF<span>*</span></Link><Link href="/#projects"><ArrowLeft size={15} /> Back to all projects</Link></footer>
+      <footer className="contact-page-footer"><span>© {new Date().getFullYear()} AMERTHA. All rights reserved.</span>
+<Link href="/#projects"><ArrowLeft size={15} /> Back to all projects</Link>
+
+      </footer>
     </main>
   );
 }

@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About Maulana Akbar Kusuma",
-  description: "Learn about Maulana Akbar Kusuma (MLSTVFF), a UI/UX Designer from Indonesia focused on user-centered product experiences, interface design, and digital workflows.",
+  description: "Learn about Maulana Akbar Kusuma (AMERTHA), a UI/UX Designer from Indonesia focused on user-centered product experiences, interface design, and digital workflows.",
   alternates: absoluteUrl("/about") ? { canonical: absoluteUrl("/about") } : undefined,
   openGraph: {
     type: "profile",
-    title: "About Maulana Akbar Kusuma | MLSTVFF",
+    title: "About Maulana Akbar Kusuma | AMERTHA",
     description: "A little about Maulana Akbar Kusuma, UI/UX Designer from Indonesia.",
     url: absoluteUrl("/about"),
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Maulana Akbar Kusuma | MLSTVFF",
+    title: "About Maulana Akbar Kusuma | AMERTHA",
     description: "A little about Maulana Akbar Kusuma, UI/UX Designer from Indonesia.",
   },
 };
@@ -42,7 +43,16 @@ export default function AboutPage() {
   return (
     <main className="about-page">
       <header className="about-page-nav">
-        <Link className="about-page-brand" href="/">MLSTVFF<span>*</span></Link>
+        <Link className="about-page-brand" href="/" aria-label="Amertha - Home">
+  <Image
+    src="/images/mlstvff-logo-black.svg"
+    alt="Amertha"
+    width={150}
+    height={44}
+    priority
+    className="about-page-logo"
+  />
+</Link>
         <Link className="about-page-back" href="/"><ArrowLeft size={15} /> Back to home</Link>
       </header>
 
@@ -130,9 +140,9 @@ export default function AboutPage() {
 
       </section>
 
-      <footer className="about-page-footer">
-        <Link className="about-page-brand" href="/">MLSTVFF<span>*</span></Link>
-        <Link href="/#projects">Explore selected work <ArrowUpRight size={14} /></Link>
+<footer className="contact-page-footer"><span>© {new Date().getFullYear()} AMERTHA. All rights reserved.</span>
+ <Link href="/#projects">Explore selected work <ArrowUpRight size={14} /></Link>
+
       </footer>
     </main>
   );

@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, ArrowUpRight, CheckCircle2, LoaderCircle, Mail } from "lucide-react";
 
 const projectTypes = ["UI/UX Design", "Website Design", "Mobile App Design", "Dashboard / SaaS", "Design System", "Other collaboration"];
@@ -40,7 +41,16 @@ export default function ContactPage() {
   return (
     <main className="contact-page">
       <header className="contact-header">
-        <Link className="brand contact-brand" href="/" aria-label="MLSTVFF home">MLSTVFF<span>✳</span></Link>
+                <Link className="about-page-brand" href="/" aria-label="Amertha - Home">
+  <Image
+    src="/images/mlstvff-logo-black.svg"
+    alt="Amertha"
+    width={150}
+    height={44}
+    priority
+    className="about-page-logo"
+  />
+</Link>
         <Link className="contact-back" href="/"><ArrowLeft size={14} /> Back to home</Link>
       </header>
 
@@ -92,7 +102,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <footer className="contact-page-footer"><span>© {new Date().getFullYear()} MLSTVFF. All rights reserved.</span><Link href="/">Back to portfolio <ArrowUpRight size={12} /></Link></footer>
+      <footer className="contact-page-footer"><span>© {new Date().getFullYear()} AMERTHA. All rights reserved.</span><Link href="/">Back to portfolio <ArrowUpRight size={12} /></Link></footer>
     </main>
   );
 }

@@ -694,6 +694,54 @@ html.js-scroll-reveal .about-copy.scroll-reveal.is-revealed { opacity: 1 !import
 }
 
 
+.footer-logo-image {
+  display: block;
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .footer-logo-image {
+    width: 110px;
+  }
+}
+
+
+.brand img {
+  display: block;
+  width: 120px;
+  height: auto;
+}
+
+.hero-logo {
+  width: 100%;
+  max-width: 1036px;
+}
+
+.hero-logo-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .brand img {
+    width: 100px;
+  }
+
+  .hero-logo {
+    max-width: 100%;
+  }
+}
+
+
+
 @media (max-width: 600px) {
   .brand-asterisk {
     width: 0.85em;
