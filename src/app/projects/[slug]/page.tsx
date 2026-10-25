@@ -38,13 +38,13 @@ const projects = {
     approach: "We developed a clean, light-themed interface with a strong typographic hierarchy, a blue-and-white visual identity, and prominent product imagery. Structured content sections highlight the company's expertise, customer service, industry applications, and core values, creating an experience that balances technical credibility with accessible navigation.",
     outcomes: ["More scannable service pages", "Consistent responsive patterns", "An organized experience connecting company information, product offerings, and customer benefitsClearer calls to action"]
   },
-  "synclab": {
-    number: "006.", title: "SYNCLAB", year: "2023", category: "WEBSITE",
+  "the-aesthetics-skin": {
+    number: "006.", title: "The Aesthetics Skin", year: "2025", category: "BEAUTY & SKINCARE E-COMMERCE",
     image: "photo-1534528741775-53994a69daeb",
-    intro: "A minimal website concept that uses a confident art direction to introduce a modern digital product.",
-    challenge: "Create a distinctive first impression while keeping key product information easy to find.",
-    approach: "We paired expressive imagery with a simple page structure, concise copy, and a consistent component system that supports future growth.",
-    outcomes: ["A clearer presentation of industrial printing equipment and solutions", "A professional digital identity built around trust, quality, and innovation", "Consistent component styling"]
+    intro:       "A modern skincare e-commerce experience designed to bring beauty, self-care, and product discovery together through a refined and approachable digital storefront.",
+    challenge:       "Create a beauty-focused online shopping experience that balances an engaging brand story with practical product discovery. The website needed to help customers explore skincare collections, find products suited to their skin, and navigate the shopping journey with confidence.",
+    approach:       "We developed a clean, light interface using soft lavender accents, rounded components, and expressive beauty imagery to create a calm and contemporary visual identity. A welcoming homepage introduces the brand philosophy, while structured product listings, category filters, skin-type selections, and price controls support a more intuitive shopping experience.",
+    outcomes: ["A cohesive visual identity reflecting the brand's beauty and self-care positioning", "A more organized way to explore skincare products and categories", "A shopping experience that balances editorial storytelling with product discovery"]
   }
 };
 
