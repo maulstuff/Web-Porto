@@ -12,7 +12,7 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "MLSTVFF — UI/UX Designer",
+  title: "Amertha — Web Portfolio of Maulana Akbar Kusuma",
   description:
     "Maulana Akbar Kusuma is a UI/UX designer from Indonesia, creating clear and intuitive digital experiences.",
 };

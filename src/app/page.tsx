@@ -16,10 +16,10 @@ const services = [
 ];
 
 const projects = [
-  { n: "001.", title: "RAVEN CLAW", slug: "raven-claw", year: "2025", category: "E-COMMERCE", image: "photo-1531058020387-3be344556be6", className: "project-large", alt: "Sculptural dark product design" },
-  { n: "002.", title: "WILLOW STUDIO", slug: "willow-studio", year: "2024", category: "STUDIO", image: "photo-1506794778202-cad84cf45f1d", className: "project-small", alt: "Creative studio portrait" },
-  { n: "003.", title: "MAISON LAIV", slug: "maison-laiv", year: "2024", category: "BRANDING", image: "photo-1557682250-33bd709cbe85", className: "project-center", alt: "Abstract monochrome brand texture" },
-  { n: "004.", title: "MYSTIC MEADOWS", slug: "mystic-meadows", year: "2023", category: "AGENCY", image: "photo-1518770660439-4636190af475", className: "project-small project-four", alt: "Minimal technology product" },
+  { n: "001.", title: "Archy Industries", slug: "archy-industries", year: "2023", category: "INDUSTRIAL DESIGN", image: "photo-1531058020387-3be344556be6", className: "project-large", alt: "Sculptural dark product design" },
+  { n: "002.", title: "Madhouse", slug: "madhouse", year: "2023", category: "CREATIVE & DIGITAL AGENCY", image: "photo-1506794778202-cad84cf45f1d", className: "project-small", alt: "Creative studio portrait" },
+  { n: "003.", title: "Atexco", slug: "atexco", year: "2023", category: "INDUSTRIAL & DIGITAL PRINTING", image: "photo-1557682250-33bd709cbe85", className: "project-center", alt: "Abstract monochrome brand texture" },
+  { n: "004.", title: "Putra Mutiara Jaya", slug: "putra-mutiara-jaya", year: "2024", category: "INDUSTRIAL PRINTING SOLUTIONS", image: "photo-1518770660439-4636190af475", className: "project-small project-four", alt: "Minimal technology product" },
   { n: "006.", title: "SYNCLAB", slug: "synclab", year: "2023", category: "WEBSITE", image: "photo-1534528741775-53994a69daeb", className: "project-large project-six", alt: "Minimal fashion portrait" },
 ];
 
@@ -146,10 +146,10 @@ export default function Home() {
         <div className="hero-glow hero-glow-green" />
         <div className="hero-glow hero-glow-blue" />
         <header className="topbar">
-          <a href="#home" className="brand" aria-label="MLSTVFF Home">
+          <a href="#home" className="brand" aria-label="Amertha Home">
   <Image
     src="/images/mlstvff-logo-white.svg"
-    alt="MLSTVFF"
+    alt="Amertha"
     width={120}
     height={30}
     priority

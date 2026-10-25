@@ -4,7 +4,7 @@ import Image from "next/image";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About Maulana Akbar Kusuma",
+  title: "About — Maulana Akbar Kusuma | Amertha",
   description: "Learn about Maulana Akbar Kusuma (AMERTHA), a UI/UX Designer from Indonesia focused on user-centered product experiences, interface design, and digital workflows.",
   alternates: absoluteUrl("/about") ? { canonical: absoluteUrl("/about") } : undefined,
   openGraph: {

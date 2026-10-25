@@ -6,37 +6,37 @@ import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import ProjectGallery from "@/components/ProjectGallery";
 
 const projects = {
-  "raven-claw": {
-    number: "001.", title: "RAVEN CLAW", year: "2025", category: "E-COMMERCE",
+  "archy-industries": {
+    number: "001.", title: "Archy Industries", year: "2023", category: "INDUSTRIAL DESIGN",
     image: "photo-1531058020387-3be344556be6",
-    intro: "A bold digital storefront built to give a distinctive product brand a clearer, more immersive online presence.",
-    challenge: "Create a memorable shopping experience that balances a strong visual identity with a simple path to purchase.",
-    approach: "We shaped the experience around confident typography, focused product storytelling, and a clear information hierarchy. The interface keeps product discovery direct while allowing the imagery and brand personality to lead.",
-    outcomes: ["Clearer product discovery", "A consistent visual system", "A streamlined shopping journey"]
+    intro: "A modern digital experience for a residential brand, bringing architecture, lifestyle, and contemporary home living together through a refined online presence.",
+    challenge: "Create a clear and engaging property website that showcases architectural details, communicates the value of each home, and helps visitors explore different property options without overwhelming them.",
+    approach: "We designed an editorial-style experience built around architectural photography, generous white space, and a minimal navigation system. An asymmetrical layout creates visual rhythm, while structured property details and clear product variants make the browsing experience intuitive.",
+    outcomes: ["A stronger visual presentation of residential architecture", "A clear hierarchy for property information and specifications", "A more intuitive experience for exploring home variants"]
   },
-  "willow-studio": {
-    number: "002.", title: "WILLOW STUDIO", year: "2024", category: "STUDIO",
+  "madhouse": {
+    number: "002.", title: "MADHOUSE", year: "2024", category: "CREATIVE & DIGITAL AGENCY",
     image: "photo-1506794778202-cad84cf45f1d",
-    intro: "A refined digital home for a creative studio, designed to make its point of view and work easy to explore.",
-    challenge: "Translate a studio's personality into a flexible website without letting the layout compete with the work.",
-    approach: "We used generous whitespace, editorial typography, and a restrained navigation system. Project imagery gets room to breathe, while small interactions help visitors move naturally through the portfolio.",
-    outcomes: ["A more distinctive studio presence", "Editorial portfolio storytelling", "Simplified navigation"]
+    intro: "A bold digital experience for a creative agency that turns ambitious ideas into distinctive visual identities, engaging digital products, and memorable brand experiences.",
+    challenge: "Build a distinctive agency website that communicates Madhouse's creative personality, showcases its diverse capabilities, and introduces the people behind the work without compromising clarity or usability.",
+    approach: "We combined oversized typography, immersive abstract visuals, and a high-contrast black interface to create a bold editorial experience. A carefully structured layout connects the agency introduction, selected works, team profiles, and service offerings, while subtle gradients and luminous accents bring depth to the visual identity.",
+    outcomes: ["A distinctive digital identity that reflects the agency's creative character", "A clear presentation of services, selected projects, and team members", "An immersive browsing experience built around bold typography and visual storytelling"]
   },
-  "maison-laiv": {
-    number: "003.", title: "MAISON LAIV", year: "2024", category: "BRANDING",
+  "atexco": {
+    number: "003.", title: "Atexco", year: "2023", category: "INDUSTRIAL & DIGITAL PRINTING",
     image: "photo-1557682250-33bd709cbe85",
-    intro: "A visual identity exploration translated into a digital brand experience with a tactile, contemporary feel.",
-    challenge: "Build a recognizable visual language that feels consistent across brand touchpoints and digital content.",
-    approach: "The direction pairs a focused color palette with modular layouts and clear typographic contrast. Reusable patterns help the brand stay coherent as content expands.",
-    outcomes: ["A coherent digital identity", "Reusable brand components", "Consistent visual hierarchy"]
+    intro: "A corporate digital experience for Atexco, showcasing advanced digital printing machinery and textile printing solutions through a modern, product-focused website.",
+    challenge: "Present complex industrial printing technology in a way that feels accessible and engaging, while helping potential customers explore machinery, understand product capabilities, and discover the company's expertise in digital textile printing.",
+    approach: "We combined a structured corporate layout with bold blue branding, clean typography, and large product visuals to communicate precision and technological innovation. Dedicated product showcases, company history, textile application galleries, and vision sections create a cohesive experience that connects industrial capabilities with real-world applications.",
+    outcomes: ["A clearer presentation of digital printing machinery and product ranges", "A cohesive brand experience built around Atexco's blue visual identity", "A structured journey through company information, industrial applications, and technology"]
   },
-  "mystic-meadows": {
-    number: "004.", title: "MYSTIC MEADOWS", year: "2023", category: "AGENCY",
+  "putra-mutiara-jaya": {
+    number: "004.", title: "Putra Mutiara Jaya", year: "2024", category: "INDUSTRIAL PRINTING SOLUTIONS",
     image: "photo-1518770660439-4636190af475",
-    intro: "A clean agency website concept designed to make complex services feel approachable and easy to understand.",
-    challenge: "Organize a broad set of offerings into a website that helps potential clients find the right information quickly.",
-    approach: "We grouped content by user intent, clarified page hierarchy, and created repeatable sections that make the site easier to scan on desktop and mobile.",
-    outcomes: ["More scannable service pages", "Consistent responsive patterns", "Clearer calls to action"]
+    intro: "A modern corporate website for Putra Mutiara Jaya, presenting advanced digital printing machinery and professional printing solutions through a clear, customer-focused digital experience.",
+    challenge: "Create a professional online presence that communicates PMJ's expertise in digital printing technology, showcases its product capabilities, and builds customer confidence through clear information about the company, its services, and its commitment to quality.",
+    approach: "We developed a clean, light-themed interface with a strong typographic hierarchy, a blue-and-white visual identity, and prominent product imagery. Structured content sections highlight the company's expertise, customer service, industry applications, and core values, creating an experience that balances technical credibility with accessible navigation.",
+    outcomes: ["More scannable service pages", "Consistent responsive patterns", "An organized experience connecting company information, product offerings, and customer benefitsClearer calls to action"]
   },
   "synclab": {
     number: "006.", title: "SYNCLAB", year: "2023", category: "WEBSITE",
@@ -44,7 +44,7 @@ const projects = {
     intro: "A minimal website concept that uses a confident art direction to introduce a modern digital product.",
     challenge: "Create a distinctive first impression while keeping key product information easy to find.",
     approach: "We paired expressive imagery with a simple page structure, concise copy, and a consistent component system that supports future growth.",
-    outcomes: ["Focused first impression", "Scalable page structure", "Consistent component styling"]
+    outcomes: ["A clearer presentation of industrial printing equipment and solutions", "A professional digital identity built around trust, quality, and innovation", "Consistent component styling"]
   }
 };
 
