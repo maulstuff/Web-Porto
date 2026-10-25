@@ -21,7 +21,7 @@ export default function Icon() {
           letterSpacing: -1.5,
         }}
       >
-        ML<span style={{ color: "#24ed45" }}>✳</span>
+        AM
       </div>
     ),
     { ...size },
