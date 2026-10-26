@@ -205,7 +205,7 @@ export default function Home() {
         <section className="about section-pad" id="about">
           <Divider />
           <div className="about-grid">
-            <div className="about-label"><SectionMarker label="Introduction" />{/* <PillLink dark /> */}</div>
+            <div className="about-label"><SectionMarker label="INTRODUCTION" />{/* <PillLink dark /> */}</div>
             
 <div className="about-copy">
   <h2>
@@ -237,7 +237,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="services section-pad" id="services">
+        {/*<section className="services section-pad" id="services">
           <Divider />
           <SectionMarker label="SERVICES" />
           <div className="services-grid">
@@ -265,11 +265,11 @@ export default function Home() {
               </article>
             ))}
           </div>
-        </section>
+        </section> */}
 
         <section className="projects section-pad" id="projects">
           <Divider />
-          <SectionMarker label="SELECTED PROJECTS" />
+          <SectionMarker label="SELECTED WORK" />
           <div className="project-grid">
             {projects.map((project) => (
               <article className={`project-card ${project.className}`} key={project.n}>
@@ -287,7 +287,83 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="case-study section-pad" id="case-study">
+            
+<section className="experience-section section-pad" id="experience">
+  <div className="experience-grid">
+    <div className="experience-label">
+<SectionMarker label="EXPERIENCE" />
+    </div>
+
+    <div className="experience-content">
+      <header className="experience-heading">
+        <h2>Experience</h2>
+        <p>
+          A journey shaped by design, collaboration,
+          and continuous learning.
+        </p>
+      </header>
+
+      <div className="experience-list">
+        <article className="experience-item">
+          <span className="experience-year">2023 — Present</span>
+          <div>
+            <h3>Freelance UI/UX Designer</h3>
+            <p className="experience-company">Independent Practice</p>
+            <p>
+              Working with businesses, founders, and individuals
+              to design digital products and websites that solve
+              real problems.
+            </p>
+          </div>
+        </article>
+
+        <article className="experience-item">
+          <span className="experience-year">2021 — 2023</span>
+          <div>
+            <h3>UI/UX Designer</h3>
+            <p className="experience-company">
+              Company / Studio Name
+            </p>
+            <p>
+              Contributed to product design, user research,
+              and interface development for digital products.
+            </p>
+          </div>
+        </article>
+
+        <article className="experience-item">
+          <span className="experience-year">2019 — 2021</span>
+          <div>
+            <h3>Junior UI/UX Designer</h3>
+            <p className="experience-company">
+              Company / Organization Name
+            </p>
+            <p>
+              Supported the design process from research
+              to final UI, collaborating with cross-functional teams.
+            </p>
+          </div>
+        </article>
+
+        <article className="experience-item">
+          <span className="experience-year">2018 — 2019</span>
+          <div>
+            <h3>Design Intern</h3>
+            <p className="experience-company">
+              Company / Organization Name
+            </p>
+            <p>
+              Assisted in interface design and learned the
+              fundamentals of product design.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+        {/*<section className="case-study section-pad" id="case-study">
           <Divider />
           <div className="case-study-heading">
             <div>
@@ -314,7 +390,7 @@ export default function Home() {
             </div>
           </article>
           <p className="case-study-note">Concept presentation. Replace this example with a real project and verified process details before publishing.</p>
-        </section>
+        </section> */}
 
         <section className="process section-pad" id="process">
           <Divider />
@@ -354,7 +430,7 @@ export default function Home() {
         </section>
 
 
-        <section className="collaboration section-pad" id="collaboration">
+        {/*<section className="collaboration section-pad" id="collaboration">
           <Divider />
           <div className="collaboration-heading">
             <div>
@@ -368,7 +444,7 @@ export default function Home() {
             <article><span>02</span><h3>Thoughtful decisions</h3><p>Choose solutions based on user needs and project goals, not decoration alone.</p></article>
             <article><span>03</span><h3>Useful handoff</h3><p>Prepare organized components, interaction details, and notes that support implementation.</p></article>
           </div>
-        </section>
+        </section> */}
 
         <section className="faq section-pad" id="faq">
           <Divider />

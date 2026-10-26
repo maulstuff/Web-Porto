@@ -4735,3 +4735,105 @@ html.js-scroll-reveal .about-copy.scroll-reveal.is-revealed {
     padding-left: 0;
   }
 }
+
+
+/* Experience section */
+.experience-section {
+  border-top: 1px solid var(--line);
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: 32% 68%;
+  gap: 0;
+}
+
+.experience-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding-top: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.experience-content {
+  min-width: 0;
+  padding-left: 280px;
+}
+
+.experience-heading {
+  margin-bottom: 56px;
+}
+
+.experience-heading h2 {
+  margin: 0 0 10px;
+  font-size: clamp(36px, 4vw, 56px);
+  line-height: 1;
+  letter-spacing: -0.055em;
+  font-weight: 500;
+}
+
+.experience-heading p {
+  margin: 0;
+  color: #888;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.experience-item {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 24px;
+  position: relative;
+}
+
+.experience-year {
+  color: #888;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.experience-item h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.experience-item p {
+  margin: 0;
+  color: #888;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.experience-item .experience-company {
+  margin-bottom: 4px;
+}
+
+@media (max-width: 760px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .experience-heading {
+    margin-bottom: 36px;
+  }
+
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .experience-list {
+    gap: 30px;
+  }
+}
