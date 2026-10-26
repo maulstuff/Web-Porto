@@ -226,7 +226,7 @@ export default function Home() {
 
     <a
       className="cv-download"
-      href="/cv-maulana-akbar-kusuma.pdf"
+      href="/CV - Maulana Akbar Kusuma 2026 - English.pdf"
       download
     >
       Download CV <ArrowUpRight size={13} />
