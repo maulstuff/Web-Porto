@@ -4703,3 +4703,35 @@ html.js-scroll-reveal .about-copy.scroll-reveal.is-revealed {
     height: 0.45em;
   }
 }
+
+
+.about-copy h2 {
+  max-width: 850px;
+  font-size: clamp(32px, 4.5vw, 58px);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.about-copy h2 em {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.about-copy > p {
+  max-width: 680px;
+  margin-top: 22px;
+  color: #888;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.about-copy {
+  padding-left: 280px;
+}
+
+@media (max-width: 1024px) {
+  .about-copy {
+    padding-left: 0;
+  }
+}

@@ -205,11 +205,35 @@ export default function Home() {
         <section className="about section-pad" id="about">
           <Divider />
           <div className="about-grid">
-            <div className="about-label"><SectionMarker label="ABOUT ME" />{/* <PillLink dark /> */}</div>
-            <div className="about-copy">
-              <h2>I’m Maulana Akbar Kusuma, a UI/UX designer from Indonesia. I turn complex ideas into clear, intuitive digital experiences through thoughtful research and visual design.</h2>
-              <div className="about-actions"><a className="text-link" href="/about">More about me <ArrowUpRight size={13} /></a><a className="cv-download" href="/cv-maulana-akbar-kusuma.pdf" download>Download CV <ArrowUpRight size={13} /></a></div>
-            </div>
+            <div className="about-label"><SectionMarker label="Introduction" />{/* <PillLink dark /> */}</div>
+            
+<div className="about-copy">
+  <h2>
+    I design with <em>clarity, purpose,</em>
+    <br />
+    and a focus on what truly matters.
+  </h2>
+
+  <p>
+    Amertha is an independent design practice by Maulana Akbar Kusuma,
+    creating digital experiences for businesses, founders, and individuals.
+  </p>
+
+  <div className="about-actions">
+    <a className="text-link" href="/about">
+      More about me <ArrowUpRight size={13} />
+    </a>
+
+    <a
+      className="cv-download"
+      href="/cv-maulana-akbar-kusuma.pdf"
+      download
+    >
+      Download CV <ArrowUpRight size={13} />
+    </a>
+  </div>
+</div>
+
           </div>
         </section>
 

@@ -66,7 +66,10 @@ export default function AboutPage() {
           <figure className="about-page-profile-image">
             <Image
               src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1200&q=85"
-              alt="Portrait placeholder for Maulana Akbar Kusuma"
+  alt="Portrait of Maulana Akbar Kusuma"
+  width={1200}
+  height={1400}
+  sizes="(max-width: 760px) 100vw, 35vw"
             />
             <figcaption><span>MAULANA AKBAR KUSUMA</span><span>UI/UX DESIGNER</span></figcaption>
           </figure>
