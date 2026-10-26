@@ -126,7 +126,7 @@ export default function AboutPage() {
     </span>
   </a>
 
-  <a
+  {/*<a
     href="/CV - Maulana Akbar Kusuma 2026 - English.pdf"
     download
     className="about-cta-button about-cta-secondary"
@@ -135,7 +135,7 @@ export default function AboutPage() {
     <span className="about-cta-icon">
       <ArrowUpRight size={25} strokeWidth={2} />
     </span>
-  </a>
+  </a> */}
 </div>
 
       </section>

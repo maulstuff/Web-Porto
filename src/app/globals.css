@@ -6,7 +6,7 @@
   --muted: #777;
   --soft: #f5f5f5;
   --line: #e5e5e5;
-  --green: #2ff044;
+  --green: #0249D9;
   --page-pad: clamp(20px, 2.8vw, 48px)
 }
 
@@ -74,7 +74,7 @@ button {
   height: 32vw;
   left: -12vw;
   bottom: -19vw;
-  background: rgba(0, 135, 82, .48)
+  background: rgba(2, 73, 217, 0.48);
 }
 
 .hero-glow-blue {
@@ -82,7 +82,7 @@ button {
   height: 42vw;
   right: -17vw;
   top: -6vw;
-  background: rgba(0, 91, 104, .28)
+  background: rgba(2, 73, 217, 0.48);
 }
 
 .topbar {
@@ -146,7 +146,7 @@ button {
 .round-green,
 .pill-icon {
   background: var(--green);
-  color: #061009;
+  color: #ffffff;
   display: grid;
   place-items: center;
   border-radius: 50%;
@@ -1983,7 +1983,7 @@ button {
 .detail-eyebrow span {
   width: 7px;
   height: 7px;
-  background: #24ed45;
+  background: #0249D9;
   display: inline-block
 }
 
@@ -2144,8 +2144,8 @@ button {
   width: 34px;
   height: 34px;
   border-radius: 50%;
-  background: #24ed45;
-  color: #111;
+  background: #0249D9;
+  color: #ffffff;
   display: grid;
   place-items: center
 }
@@ -2322,7 +2322,7 @@ button {
   display: inline-block;
   width: 7px;
   height: 7px;
-  background: #24ed45
+  background: #0249D9
 }
 
 .about-page-hero-grid {
@@ -3134,7 +3134,7 @@ button {
 
 .study-wordmark span,
 .study-eyebrow span {
-  color: #24ed45
+  color: #0249D9
 }
 
 .study-back {
@@ -3165,7 +3165,7 @@ button {
   display: inline-block;
   width: 7px;
   height: 7px;
-  background: #24ed45
+  background: #0249D9
 }
 
 .study-intro h1 {
@@ -3374,8 +3374,8 @@ button {
 }
 
 .study-primary svg {
-  background: #24ed45;
-  color: #080808;
+  background: #0249D9;
+  color: #ffffff;
   width: 28px;
   height: 28px;
   padding: 7px;
@@ -3736,7 +3736,7 @@ button {
   height: 34px;
   border-radius: 50%;
   background: var(--green);
-  color: #080808
+  color: #ffffff
 }
 
 .contact-spinner {
@@ -4611,8 +4611,8 @@ html.js-scroll-reveal .about-copy.scroll-reveal.is-revealed {
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  color: #080808;
-  background: #20ef4b;
+  color: #ffffff;
+  background: #0249D9;
   transition: transform 250ms ease;
 }
 

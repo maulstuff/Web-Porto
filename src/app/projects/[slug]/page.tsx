@@ -128,7 +128,26 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
       <section data-scroll-reveal className="detail-story detail-story-split"><div className="detail-section-label">02 / THE APPROACH</div><div><h2>Thoughtful by design.</h2><p>{project.approach}</p></div></section>
       <section data-scroll-reveal className="detail-outcomes"><div className="detail-section-label">03 / KEY OUTCOMES</div><div className="detail-outcome-list">{project.outcomes.map((outcome, i) => <div key={outcome}><span>0{i + 1}</span><strong>{outcome}</strong><ArrowUpRight size={18} /></div>)}</div></section>
       <ProjectGallery projectTitle={project.title} />
-      <section data-scroll-reveal className="detail-next"><p>HAVE A PROJECT IN MIND?</p><h2>Let’s make something meaningful.</h2><Link href="/contact">Let’s Discuss <span><ArrowUpRight size={16} /></span></Link></section>
+      {/* <section data-scroll-reveal className="detail-next"><p>HAVE A PROJECT IN MIND?</p><h2>Let’s make something meaningful.</h2><Link href="/contact">Let’s Discuss <span><ArrowUpRight size={16} /></span></Link></section> */}
+      <section data-scroll-reveal className="about-page-cta"><p>HAVE A PROJECT IN MIND?</p><h2>Let’s make something meaningful.</h2><div className="about-cta-buttons"><a href="/contact" className="about-cta-button about-cta-primary"><span>Let’s Discuss</span>
+      <span className="about-cta-icon">
+      <ArrowUpRight size={25} strokeWidth={2} />
+    </span>
+  </a>
+
+  {/*<a
+    href="/CV - Maulana Akbar Kusuma 2026 - English.pdf"
+    download
+    className="about-cta-button about-cta-secondary"
+  >
+    <span>Download CV</span>
+    <span className="about-cta-icon">
+      <ArrowUpRight size={25} strokeWidth={2} />
+    </span>
+  </a> */}
+</div>
+
+      </section>
       <footer className="contact-page-footer"><span>© {new Date().getFullYear()} AMERTHA. All rights reserved.</span>
 <Link href="/#projects"><ArrowLeft size={15} /> Back to all projects</Link>
 
