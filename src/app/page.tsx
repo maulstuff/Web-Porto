@@ -162,7 +162,7 @@ export default function Home() {
             <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
             <a href="/about" onClick={() => setMenuOpen(false)}>About</a>
             <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
-            <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
+            <a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a>
             <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
           </nav>
           <div className="topbar-right"><a href="/contact">Let’s Discuss</a><a className="round-green" href="/contact" aria-label="Discuss a project"><ArrowUpRight size={14} /></a></div>
@@ -503,7 +503,7 @@ export default function Home() {
                   <a className="pill-link footer-cv-link" href="/CV - Maulana Akbar Kusuma 2026 - English.pdf" download>Download CV <span className="pill-icon"><ArrowUpRight size={13} /></span></a>
                 </div>
                 <div className="footer-right-group">
-                  <div className="footer-links"><h4>Explore</h4><a href="#home">Home</a><a href="/about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="/contact">Contact</a></div>
+                  <div className="footer-links"><h4>Explore</h4><a href="#home">Home</a><a href="/about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="/contact">Contact</a></div>
                   <div className="footer-connect"><h4>Let’s connect</h4><div><a href="https://dribbble.com/mlstvff" target="_blank" rel="noreferrer">Dribbble <ArrowUpRight size={12} /></a><a href="https://instagram.com/mlstvff" target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={12} /></a><a href="https://id.linkedin.com/in/maulstuff" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={12} /></a></div></div>
                 </div>
               </div>
