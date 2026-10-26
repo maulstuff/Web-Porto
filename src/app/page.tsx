@@ -204,36 +204,63 @@ export default function Home() {
       <div className="page-shell">
         <section className="about section-pad" id="about">
           <Divider />
-          <div className="about-grid">
-            <div className="about-label"><SectionMarker label="INTRODUCTION" />{/* <PillLink dark /> */}</div>
-            
-<div className="about-copy">
-  <h2>
-    I design with <em>clarity, purpose,</em>
-    <br />
-    and a focus on what truly matters.
-  </h2>
+          <div className="about-grid about-editorial">
+            <div className="about-label">
+              <SectionMarker label="INTRODUCTION" />
+            </div>
 
-  <p>
-    Amertha is an independent design practice by Maulana Akbar Kusuma,
-    creating digital experiences for businesses, founders, and individuals.
-  </p>
+            <div className="about-composition">
+              <div className="about-hero-composition">
+                <div className="about-visual about-visual-overlap">
+                  <Image
+                    src={imageUrl("photo-1500648767791-00dcc994a43e", 1100)}
+                    alt="Portrait representing the designer behind Amertha"
+                    fill
+                    sizes="(max-width: 760px) 100vw, 42vw"
+                    priority={false}
+                  />
+                </div>
+                <div className="about-copy about-copy-reference">
+                  <h2>
+                    <span>I craft thoughtful digital experiences that</span>
+                    <span>turn bold ideas into clear, compelling,</span>
+                    <span className="about-headline-indented">and memorable brand</span>
+                    <span className="about-headline-indented">experiences built to truly</span>
+                    <span className="about-headline-indented">stand out.</span>
+                  </h2>
+                </div>
+              </div>
 
-  <div className="about-actions">
-    <a className="text-link" href="/about">
-      More about me <ArrowUpRight size={13} />
-    </a>
+              <div className="about-lower">
+                <div className="about-visual about-visual-spacer" aria-hidden="true" />
 
-    <a
-      className="cv-download"
-      href="/CV - Maulana Akbar Kusuma 2026 - English.pdf"
-      download
-    >
-      Download CV <ArrowUpRight size={13} />
-    </a>
-  </div>
-</div>
+                <div className="about-description">
+                  <p>
+                    Amertha is an independent design practice by Maulana Akbar Kusuma,
+                    creating thoughtful digital experiences for businesses, founders,
+                    and individuals.
+                  </p>
 
+                  <p className="about-description-secondary">
+                    From the first idea to the final interface, the focus is on making
+                    complex things feel clear, useful, and considered.
+                  </p>
+
+                  <div className="about-actions">
+                    <a className="text-link" href="/about">
+                      More about me <ArrowUpRight size={13} />
+                    </a>
+                    <a
+                      className="cv-download"
+                      href="/CV - Maulana Akbar Kusuma 2026 - English.pdf"
+                      download
+                    >
+                      Download CV <ArrowUpRight size={13} />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
