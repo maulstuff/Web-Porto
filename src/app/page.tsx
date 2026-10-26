@@ -304,60 +304,74 @@ export default function Home() {
       </header>
 
       <div className="experience-list">
-        <article className="experience-item">
-          <span className="experience-year">2023 — Present</span>
-          <div>
-            <h3>Freelance UI/UX Designer</h3>
-            <p className="experience-company">Independent Practice</p>
-            <p>
-              Working with businesses, founders, and individuals
-              to design digital products and websites that solve
-              real problems.
-            </p>
-          </div>
-        </article>
+<article className="experience-item">
+  <div className="experience-timeline">
+    <span className="experience-dot" />
+    <span className="experience-year">2023 — Present</span>
+  </div>
 
-        <article className="experience-item">
-          <span className="experience-year">2021 — 2023</span>
-          <div>
-            <h3>UI/UX Designer</h3>
-            <p className="experience-company">
-              Company / Studio Name
-            </p>
-            <p>
-              Contributed to product design, user research,
-              and interface development for digital products.
-            </p>
-          </div>
-        </article>
+  <div className="experience-details">
+    <h3>Freelance UI/UX Designer</h3>
+    <p className="experience-company">Independent Practice</p>
+    <p>
+      Working with businesses, founders, and individuals
+      to design digital products and websites that solve
+      real problems.
+    </p>
+  </div>
+</article>
 
-        <article className="experience-item">
-          <span className="experience-year">2019 — 2021</span>
-          <div>
-            <h3>Junior UI/UX Designer</h3>
-            <p className="experience-company">
-              Company / Organization Name
-            </p>
-            <p>
-              Supported the design process from research
-              to final UI, collaborating with cross-functional teams.
-            </p>
-          </div>
-        </article>
+<article className="experience-item">
+  <div className="experience-timeline">
+    <span className="experience-dot" />
+    <span className="experience-year">2023 — Present</span>
+  </div>
 
-        <article className="experience-item">
-          <span className="experience-year">2018 — 2019</span>
-          <div>
-            <h3>Design Intern</h3>
-            <p className="experience-company">
-              Company / Organization Name
-            </p>
-            <p>
-              Assisted in interface design and learned the
-              fundamentals of product design.
-            </p>
-          </div>
-        </article>
+  <div className="experience-details">
+    <h3>Freelance UI/UX Designer</h3>
+    <p className="experience-company">Independent Practice</p>
+    <p>
+      Working with businesses, founders, and individuals
+      to design digital products and websites that solve
+      real problems.
+    </p>
+  </div>
+</article>
+
+<article className="experience-item">
+  <div className="experience-timeline">
+    <span className="experience-dot" />
+    <span className="experience-year">2023 — Present</span>
+  </div>
+
+  <div className="experience-details">
+    <h3>Freelance UI/UX Designer</h3>
+    <p className="experience-company">Independent Practice</p>
+    <p>
+      Working with businesses, founders, and individuals
+      to design digital products and websites that solve
+      real problems.
+    </p>
+  </div>
+</article>
+
+<article className="experience-item">
+  <div className="experience-timeline">
+    <span className="experience-dot" />
+    <span className="experience-year">2023 — Present</span>
+  </div>
+
+  <div className="experience-details">
+    <h3>Freelance UI/UX Designer</h3>
+    <p className="experience-company">Independent Practice</p>
+    <p>
+      Working with businesses, founders, and individuals
+      to design digital products and websites that solve
+      real problems.
+    </p>
+  </div>
+</article>
+
       </div>
     </div>
   </div>

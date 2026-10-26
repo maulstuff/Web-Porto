@@ -4782,10 +4782,13 @@ html.js-scroll-reveal .about-copy.scroll-reveal.is-revealed {
   line-height: 1.7;
 }
 
+
+/* Experience timeline */
 .experience-list {
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 20px;
+  padding-left: 24px;
 }
 
 .experience-item {
@@ -4793,47 +4796,158 @@ html.js-scroll-reveal .about-copy.scroll-reveal.is-revealed {
   grid-template-columns: 180px minmax(0, 1fr);
   gap: 24px;
   position: relative;
+  padding: 28px 28px;
+  border: 1px solid #e8e8e8;
+  border-radius: 16px;
+  background: #fff;
+
+  /* Soft card shadow */
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.025),
+    0 8px 24px rgba(0, 0, 0, 0.035);
+
+  transition:
+    border-color 250ms ease,
+    box-shadow 250ms ease,
+    transform 250ms ease;
+}
+
+.experience-item:hover {
+  border-color: #d8d8d8;
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.035),
+    0 12px 28px rgba(0, 0, 0, 0.055);
+  transform: translateY(-2px);
+}
+
+.experience-timeline {
+  position: static;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.experience-dot {
+  position: absolute;
+  left: -30px;
+  top: 32px;
+  z-index: 2;
+  width: 12px;
+  height: 12px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #2457f5;
+  box-shadow: 0 0 0 2px #e8edff;
+}
+
+/* Vertical line connecting the timeline dots */
+.experience-item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: -25px;
+  top: 44px;
+  bottom: -21px;
+  width: 1px;
+  background: #d9dce5;
 }
 
 .experience-year {
-  color: #888;
+  color: #858585;
   font-size: 14px;
   line-height: 1.6;
+  white-space: nowrap;
 }
 
-.experience-item h3 {
+.experience-details {
+  min-width: 0;
+}
+
+.experience-details h3 {
   margin: 0 0 8px;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 600;
 }
 
-.experience-item p {
+.experience-details p {
   margin: 0;
   color: #888;
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
-.experience-item .experience-company {
-  margin-bottom: 4px;
+.experience-details .experience-company {
+  margin-bottom: 5px;
 }
 
 @media (max-width: 760px) {
-  .experience-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .experience-heading {
-    margin-bottom: 36px;
+  .experience-list {
+    padding-left: 20px;
+    gap: 18px;
   }
 
   .experience-item {
     grid-template-columns: 1fr;
-    gap: 8px;
+    gap: 14px;
+    padding: 24px 20px 24px 28px;
+  }
+
+  .experience-dot {
+    left: -26px;
+    top: 28px;
+  }
+
+  .experience-item:not(:last-child)::before {
+    left: -21px;
+    top: 40px;
+    bottom: -19px;
+  }
+
+  .experience-year {
+    white-space: normal;
+  }
+}
+
+
+@media (max-width: 760px) {
+  .experience-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .experience-label {
+    margin: 0;
+    padding: 0;
+  }
+
+  .experience-content {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .experience-heading {
+    margin: 0 0 32px;
+    padding: 0;
+  }
+
+  .experience-heading h2,
+  .experience-heading p {
+    margin-left: 0;
+    padding-left: 0;
   }
 
   .experience-list {
-    gap: 30px;
+    width: 100%;
+    margin: 0;
+    padding-left: 18px;
+    box-sizing: border-box;
+  }
+
+  .experience-item {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
   }
 }
+
