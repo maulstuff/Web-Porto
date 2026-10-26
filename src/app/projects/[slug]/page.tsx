@@ -88,6 +88,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
+function Divider() {
+  return <div className="section-divider" aria-hidden="true" />;
+}
 export function generateStaticParams() {
   return Object.keys(projects).map((slug) => ({ slug }));
 }
@@ -148,6 +151,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
 </div>
 
       </section>
+      <Divider />
       <footer className="contact-page-footer"><span>© {new Date().getFullYear()} AMERTHA. All rights reserved.</span>
 <Link href="/#projects"><ArrowLeft size={15} /> Back to all projects</Link>
 

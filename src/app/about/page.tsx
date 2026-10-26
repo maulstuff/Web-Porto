@@ -38,6 +38,9 @@ const principles = [
     text: "From the first user flow to the final component, I care about the details while keeping the product goals and overall experience in view."
   }
 ];
+function Divider() {
+  return <div className="section-divider" aria-hidden="true" />;
+}
 
 export default function AboutPage() {
   return (
@@ -61,7 +64,7 @@ export default function AboutPage() {
         <div className="about-page-hero-grid">
           <h1>Designing digital experiences that feel <span>clear, useful,</span> and human.</h1>
           <figure className="about-page-profile-image">
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1200&q=85"
               alt="Portrait placeholder for Maulana Akbar Kusuma"
             />
@@ -125,7 +128,6 @@ export default function AboutPage() {
       <ArrowUpRight size={25} strokeWidth={2} />
     </span>
   </a>
-
   {/*<a
     href="/CV - Maulana Akbar Kusuma 2026 - English.pdf"
     download
@@ -139,7 +141,7 @@ export default function AboutPage() {
 </div>
 
       </section>
-
+<Divider />
 <footer className="contact-page-footer"><span>© {new Date().getFullYear()} AMERTHA. All rights reserved.</span>
  <Link href="/#projects">Explore selected work <ArrowUpRight size={14} /></Link>
 

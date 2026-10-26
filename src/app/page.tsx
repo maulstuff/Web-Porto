@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { ArrowDown, ArrowUpRight, Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 
 
@@ -56,7 +56,7 @@ function SectionMarker({ label }: { label: string }) {
   );
 }
 
-function AsteriskMark({ className = "" }: { className?: string }) {
+{/*function AsteriskMark({ className = "" }: { className?: string }) {
   return (
     <svg
       className={className}
@@ -77,7 +77,7 @@ function AsteriskMark({ className = "" }: { className?: string }) {
       </g>
     </svg>
   );
-}
+} */}
 function Divider() {
   return <div className="section-divider" aria-hidden="true" />;
 }
@@ -119,7 +119,7 @@ export default function Home() {
       });
     }, { threshold: 0.08, rootMargin: "0px 0px -8% 0px" });
 
-    [...sections, ...revealItems].forEach((item, index) => {
+    [...sections, ...revealItems].forEach((item) => {
       item.classList.add("scroll-reveal");
       if (revealItems.includes(item)) {
         const siblings = item.parentElement ? Array.from(item.parentElement.children) : [];
@@ -393,6 +393,7 @@ export default function Home() {
                   <div className="footer-connect"><h4>Let’s connect</h4><div><a href="https://dribbble.com/mlstvff" target="_blank" rel="noreferrer">Dribbble <ArrowUpRight size={12} /></a><a href="https://instagram.com/mlstvff" target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={12} /></a><a href="https://id.linkedin.com/in/maulstuff" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={12} /></a></div></div>
                 </div>
               </div>
+              
               <div className="footer-bottom"><span>© {new Date().getFullYear()} Amertha. All rights reserved.</span></div>
             </div>
             <div className="footer-wordmark" aria-hidden="true">AMERTHA</div>
