@@ -317,88 +317,60 @@ export default function Home() {
             
 <section className="experience-section section-pad" id="experience">
   <div className="experience-grid">
-    <div className="experience-label">
-<SectionMarker label="EXPERIENCE" />
-    </div>
-
     <div className="experience-content">
       <header className="experience-heading">
         <h2>Experience</h2>
-        <p>
-          A journey shaped by design, collaboration,
-          and continuous learning.
-        </p>
+        <p>A journey shaped by design, collaboration, and continuous learning.</p>
       </header>
 
       <div className="experience-list">
-<article className="experience-item">
-  <div className="experience-timeline">
-    <span className="experience-dot" />
-    <span className="experience-year">2023 — Present</span>
-  </div>
+        <article className="experience-item">
+          <div className="experience-role">UI/UX Designer</div>
+          <div className="experience-thumbnail" aria-hidden="true">
+            <Image src={imageUrl("photo-1557682250-33bd709cbe85", 800)} alt="Abstract blue gradient design" fill sizes="(max-width: 760px) 100vw, 24vw" />
+          </div>
+          <div className="experience-details">
+            <h3>Independent Practice</h3>
+            <span className="experience-year">2023 — Present</span>
+            <p>Leading design from early discovery through polished interface delivery—mapping user journeys, organizing information, and shaping clear website and product experiences around user and business needs.</p>
+          </div>
+        </article>
 
-  <div className="experience-details">
-    <h3>Freelance UI/UX Designer</h3>
-    <p className="experience-company">Independent Practice</p>
-    <p>
-      Working with businesses, founders, and individuals
-      to design digital products and websites that solve
-      real problems.
-    </p>
-  </div>
-</article>
+        <article className="experience-item">
+          <div className="experience-role">UI/UX Designer</div>
+          <div className="experience-thumbnail" aria-hidden="true">
+            <Image src={imageUrl("photo-1518770660439-4636190af475", 800)} alt="Abstract blue and violet digital artwork" fill sizes="(max-width: 760px) 100vw, 24vw" />
+          </div>
+          <div className="experience-details">
+            <h3>Independent Practice</h3>
+            <span className="experience-year">2023 — Present</span>
+            <p>Translating research, user needs, and project goals into user flows, wireframes, and high-fidelity screens. I focus on accessibility, clear hierarchy, and making important actions easy to find.</p>
+          </div>
+        </article>
 
-<article className="experience-item">
-  <div className="experience-timeline">
-    <span className="experience-dot" />
-    <span className="experience-year">2023 — Present</span>
-  </div>
+        <article className="experience-item">
+          <div className="experience-role">UI/UX Designer</div>
+          <div className="experience-thumbnail" aria-hidden="true">
+            <Image src={imageUrl("photo-1531058020387-3be344556be6", 800)} alt="Abstract dark blue digital artwork" fill sizes="(max-width: 760px) 100vw, 24vw" />
+          </div>
+          <div className="experience-details">
+            <h3>Independent Practice</h3>
+            <span className="experience-year">2023 — Present</span>
+            <p>Designing responsive interfaces and reusable components that stay consistent across screens. I refine typography, spacing, interaction states, and visual details to make each experience feel cohesive and easy to use.</p>
+          </div>
+        </article>
 
-  <div className="experience-details">
-    <h3>Freelance UI/UX Designer</h3>
-    <p className="experience-company">Independent Practice</p>
-    <p>
-      Working with businesses, founders, and individuals
-      to design digital products and websites that solve
-      real problems.
-    </p>
-  </div>
-</article>
-
-<article className="experience-item">
-  <div className="experience-timeline">
-    <span className="experience-dot" />
-    <span className="experience-year">2023 — Present</span>
-  </div>
-
-  <div className="experience-details">
-    <h3>Freelance UI/UX Designer</h3>
-    <p className="experience-company">Independent Practice</p>
-    <p>
-      Working with businesses, founders, and individuals
-      to design digital products and websites that solve
-      real problems.
-    </p>
-  </div>
-</article>
-
-<article className="experience-item">
-  <div className="experience-timeline">
-    <span className="experience-dot" />
-    <span className="experience-year">2023 — Present</span>
-  </div>
-
-  <div className="experience-details">
-    <h3>Freelance UI/UX Designer</h3>
-    <p className="experience-company">Independent Practice</p>
-    <p>
-      Working with businesses, founders, and individuals
-      to design digital products and websites that solve
-      real problems.
-    </p>
-  </div>
-</article>
-
+        <article className="experience-item">
+          <div className="experience-role">UI/UX Designer</div>
+          <div className="experience-thumbnail" aria-hidden="true">
+            <Image src={imageUrl("photo-1498050108023-c5249f4df085", 800)} alt="Abstract blue and purple visual composition" fill sizes="(max-width: 760px) 100vw, 24vw" />
+          </div>
+          <div className="experience-details">
+            <h3>Independent Practice</h3>
+            <span className="experience-year">2023 — Present</span>
+            <p>Building interactive prototypes in Figma, reviewing key flows, and refining designs through feedback. I also prepare organized components and handoff details to help developers implement the intended experience.</p>
+          </div>
+        </article>
       </div>
     </div>
   </div>
