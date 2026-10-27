@@ -5150,3 +5150,19 @@ html.js-scroll-reveal .about-copy.scroll-reveal.is-revealed {
     margin-top: 0;
   }
 }
+
+/* Targeted fix: move only the introduction paragraph column slightly right on desktop.
+   All other sections and the mobile layout remain unchanged. */
+@media (min-width: 761px) {
+  .about-editorial .about-description {
+    transform: translateX(clamp(18px, 2.2vw, 38px));
+  }
+}
+
+/* Final requested adjustment: move the entire intro headline slightly right on desktop only.
+   Portrait, description, CTA, other sections, and mobile layout stay unchanged. */
+@media (min-width: 761px) {
+  .about-editorial .about-copy-reference {
+    transform: translateX(clamp(16px, 2vw, 34px));
+  }
+}
