@@ -5,28 +5,103 @@ import Image from "next/image";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 
-
 const services = [
-  { n: "01", title: "UX RESEARCH & STRATEGY", text: "Understanding user needs through research, identifying pain points, and turning insights into a clear product strategy. I use these findings to shape user journeys and prioritize the problems that matter most.", kind: "text" },
-  { n: "02", title: "UI DESIGN", text: "Designing clean, accessible interfaces with thoughtful hierarchy, typography, and visual consistency. Every screen is crafted to feel intuitive, communicate clearly, and support users across different devices.", kind: "text" },
-  { n: "03", title: "PROTOTYPING & TESTING", text: "Making ideas tangible with interactive prototypes and validating flows before development. Testing key interactions early helps uncover friction, refine user journeys, and give the team confidence in the final direction.", kind: "text" },
-  { n: "04", title: "DESIGN SYSTEMS", text: "Building reusable components, clear usage rules, and practical documentation to keep digital products consistent. A scalable design system helps teams work faster while maintaining quality across every screen.", kind: "text" },
-  { n: "05", title: "PRODUCT DESIGN", text: "Connecting user needs with business goals to shape useful, intuitive digital products from discovery to delivery. I balance functionality, visual clarity, and real-world constraints to create experiences that work as a whole.", kind: "text" },
+  {
+    n: "01",
+    title: "UX RESEARCH & STRATEGY",
+    text: "Understanding user needs through research, identifying pain points, and turning insights into a clear product strategy. I use these findings to shape user journeys and prioritize the problems that matter most.",
+    kind: "text",
+  },
+  {
+    n: "02",
+    title: "UI DESIGN",
+    text: "Designing clean, accessible interfaces with thoughtful hierarchy, typography, and visual consistency. Every screen is crafted to feel intuitive, communicate clearly, and support users across different devices.",
+    kind: "text",
+  },
+  {
+    n: "03",
+    title: "PROTOTYPING & TESTING",
+    text: "Making ideas tangible with interactive prototypes and validating flows before development. Testing key interactions early helps uncover friction, refine user journeys, and give the team confidence in the final direction.",
+    kind: "text",
+  },
+  {
+    n: "04",
+    title: "DESIGN SYSTEMS",
+    text: "Building reusable components, clear usage rules, and practical documentation to keep digital products consistent. A scalable design system helps teams work faster while maintaining quality across every screen.",
+    kind: "text",
+  },
+  {
+    n: "05",
+    title: "PRODUCT DESIGN",
+    text: "Connecting user needs with business goals to shape useful, intuitive digital products from discovery to delivery. I balance functionality, visual clarity, and real-world constraints to create experiences that work as a whole.",
+    kind: "text",
+  },
   { n: "06", title: "CREATIVE DIRECTION", text: " ", kind: "image" },
 ];
 
 const projects = [
-  { n: "001.", title: "Archy Industries", slug: "archy-industries", year: "2023", category: "INDUSTRIAL DESIGN", image: "photo-1531058020387-3be344556be6", className: "project-large", alt: "Sculptural dark product design" },
-  { n: "002.", title: "Madhouse", slug: "madhouse", year: "2023", category: "CREATIVE & DIGITAL AGENCY", image: "photo-1506794778202-cad84cf45f1d", className: "project-small", alt: "Creative studio portrait" },
-  { n: "003.", title: "Atexco", slug: "atexco", year: "2023", category: "INDUSTRIAL & DIGITAL PRINTING", image: "photo-1557682250-33bd709cbe85", className: "project-center", alt: "Abstract monochrome brand texture" },
-  { n: "004.", title: "Putra Mutiara Jaya", slug: "putra-mutiara-jaya", year: "2024", category: "INDUSTRIAL PRINTING SOLUTIONS", image: "photo-1518770660439-4636190af475", className: "project-small project-four", alt: "Minimal technology product" },
-  { n: "006.", title: "The Aesthetics Skin", slug: "the-aesthetics-skin", year: "2025", category: "BEAUTY & SKINCARE E-COMMERCE", image: "photo-1534528741775-53994a69daeb", className: "project-large project-six", alt: "Minimal fashion portrait" },
+  {
+    n: "001.",
+    title: "Archy Industries",
+    slug: "archy-industries",
+    year: "2023",
+    category: "INDUSTRIAL DESIGN",
+    image: "photo-1531058020387-3be344556be6",
+    className: "project-large",
+    alt: "Sculptural dark product design",
+  },
+  {
+    n: "002.",
+    title: "Madhouse",
+    slug: "madhouse",
+    year: "2023",
+    category: "CREATIVE & DIGITAL AGENCY",
+    image: "photo-1506794778202-cad84cf45f1d",
+    className: "project-small",
+    alt: "Creative studio portrait",
+  },
+  {
+    n: "003.",
+    title: "Atexco",
+    slug: "atexco",
+    year: "2023",
+    category: "INDUSTRIAL & DIGITAL PRINTING",
+    image: "photo-1557682250-33bd709cbe85",
+    className: "project-center",
+    alt: "Abstract monochrome brand texture",
+  },
+  {
+    n: "004.",
+    title: "Putra Mutiara Jaya",
+    slug: "putra-mutiara-jaya",
+    year: "2024",
+    category: "INDUSTRIAL PRINTING SOLUTIONS",
+    image: "photo-1518770660439-4636190af475",
+    className: "project-small project-four",
+    alt: "Minimal technology product",
+  },
+  {
+    n: "006.",
+    title: "The Aesthetics Skin",
+    slug: "the-aesthetics-skin",
+    year: "2025",
+    category: "BEAUTY & SKINCARE E-COMMERCE",
+    image: "photo-1534528741775-53994a69daeb",
+    className: "project-large project-six",
+    alt: "Minimal fashion portrait",
+  },
 ];
 
-const imageUrl = (id: string, width = 1000) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${width}&q=85`;
+const imageUrl = (id: string, width = 1000) =>
+  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${width}&q=85`;
 
-
-function CountUp({ value, duration = 1800 }: { value: number; duration?: number }) {
+function CountUp({
+  value,
+  duration = 1800,
+}: {
+  value: number;
+  duration?: number;
+}) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -44,7 +119,9 @@ function CountUp({ value, duration = 1800 }: { value: number; duration?: number 
     return () => window.cancelAnimationFrame(frame);
   }, [value, duration]);
 
-  return <span aria-label={String(value)}>{String(count).padStart(2, "0")}</span>;
+  return (
+    <span aria-label={String(value)}>{String(count).padStart(2, "0")}</span>
+  );
 }
 
 function SectionMarker({ label }: { label: string }) {
@@ -56,7 +133,8 @@ function SectionMarker({ label }: { label: string }) {
   );
 }
 
-{/*function AsteriskMark({ className = "" }: { className?: string }) {
+{
+  /*function AsteriskMark({ className = "" }: { className?: string }) {
   return (
     <svg
       className={className}
@@ -77,13 +155,29 @@ function SectionMarker({ label }: { label: string }) {
       </g>
     </svg>
   );
-} */}
+} */
+}
 function Divider() {
   return <div className="section-divider" aria-hidden="true" />;
 }
 
-function PillLink({ children = "Let’s Discuss", dark = false, href = "/contact" }: { children?: React.ReactNode; dark?: boolean; href?: string }) {
-  return <a className={`pill-link ${dark ? "pill-dark" : ""}`} href={href}>{children}<span className="pill-icon"><ArrowUpRight size={13} /></span></a>;
+function PillLink({
+  children = "Let’s Discuss",
+  dark = false,
+  href = "/contact",
+}: {
+  children?: React.ReactNode;
+  dark?: boolean;
+  href?: string;
+}) {
+  return (
+    <a className={`pill-link ${dark ? "pill-dark" : ""}`} href={href}>
+      {children}
+      <span className="pill-icon">
+        <ArrowUpRight size={13} />
+      </span>
+    </a>
+  );
 }
 
 export default function Home() {
@@ -93,38 +187,58 @@ export default function Home() {
   // Add reveal classes before the first paint, then reveal each card only when it enters the viewport.
   useEffect(() => {
     document.documentElement.classList.add("js-scroll-reveal");
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const sections = Array.from(document.querySelectorAll<HTMLElement>(".page-shell > section.section-pad:not(.about)"));
-    const revealItems = Array.from(document.querySelectorAll<HTMLElement>(
-      ".about-copy, .services-grid > .service-card, .project-card, .process-grid > .process-card, .faq-list > .faq-item, .case-study-feature, .collaboration-grid > *"
-    ));
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    const sections = Array.from(
+      document.querySelectorAll<HTMLElement>(
+        ".page-shell > section.section-pad:not(.about)",
+      ),
+    );
+    const revealItems = Array.from(
+      document.querySelectorAll<HTMLElement>(
+        ".about-copy, .services-grid > .service-card, .project-card, .process-grid > .process-card, .faq-list > .faq-item, .case-study-feature, .collaboration-grid > *",
+      ),
+    );
 
     if (!("IntersectionObserver" in window)) {
-      [...sections, ...revealItems].forEach((item) => item.classList.add("is-revealed"));
+      [...sections, ...revealItems].forEach((item) =>
+        item.classList.add("is-revealed"),
+      );
       return;
     }
 
     // Respect accessibility preferences while keeping the layout visible.
     if (reduceMotion) {
-      [...sections, ...revealItems].forEach((item) => item.classList.add("is-revealed"));
+      [...sections, ...revealItems].forEach((item) =>
+        item.classList.add("is-revealed"),
+      );
       return;
     }
 
-    const observer = new IntersectionObserver((entries, currentObserver) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-revealed");
-          currentObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08, rootMargin: "0px 0px -8% 0px" });
+    const observer = new IntersectionObserver(
+      (entries, currentObserver) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-revealed");
+            currentObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: "0px 0px -8% 0px" },
+    );
 
     [...sections, ...revealItems].forEach((item) => {
       item.classList.add("scroll-reveal");
       if (revealItems.includes(item)) {
-        const siblings = item.parentElement ? Array.from(item.parentElement.children) : [];
+        const siblings = item.parentElement
+          ? Array.from(item.parentElement.children)
+          : [];
         const siblingIndex = siblings.indexOf(item);
-        item.style.setProperty("--reveal-delay", `${Math.max(0, siblingIndex) % 5 * 85}ms`);
+        item.style.setProperty(
+          "--reveal-delay",
+          `${(Math.max(0, siblingIndex) % 5) * 85}ms`,
+        );
       }
       observer.observe(item);
     });
@@ -133,11 +247,31 @@ export default function Home() {
   }, []);
 
   const faqs = [
-    { question: "What kind of projects do you work on?", answer: "I focus on UI/UX and product design for websites, dashboards, and digital products — from improving an existing experience to shaping a new idea." },
-    { question: "What does your design process look like?", answer: "I usually start by understanding the goals and user needs, then define the structure, explore interface concepts, build prototypes, and refine the design with feedback." },
-    { question: "How long does a project usually take?", answer: "It depends on the scope, complexity, and feedback rounds. A focused design task may take a few days, while a larger product or website can take several weeks." },
-    { question: "Can I request revisions?", answer: "Absolutely. Feedback is part of the process. We’ll align on the project scope and review milestones so there’s room to refine the design in the right direction." },
-    { question: "What tools do you use?", answer: "My workflow can include Figma for interface design and prototyping, alongside collaboration and documentation tools to keep decisions and handoff clear." },
+    {
+      question: "What kind of projects do you work on?",
+      answer:
+        "I focus on UI/UX and product design for websites, dashboards, and digital products — from improving an existing experience to shaping a new idea.",
+    },
+    {
+      question: "What does your design process look like?",
+      answer:
+        "I usually start by understanding the goals and user needs, then define the structure, explore interface concepts, build prototypes, and refine the design with feedback.",
+    },
+    {
+      question: "How long does a project usually take?",
+      answer:
+        "It depends on the scope, complexity, and feedback rounds. A focused design task may take a few days, while a larger product or website can take several weeks.",
+    },
+    {
+      question: "Can I request revisions?",
+      answer:
+        "Absolutely. Feedback is part of the process. We’ll align on the project scope and review milestones so there’s room to refine the design in the right direction.",
+    },
+    {
+      question: "What tools do you use?",
+      answer:
+        "My workflow can include Figma for interface design and prototyping, alongside collaboration and documentation tools to keep decisions and handoff clear.",
+    },
   ];
 
   return (
@@ -147,54 +281,95 @@ export default function Home() {
         <div className="hero-glow hero-glow-blue" />
         <header className="topbar">
           <a href="#home" className="brand" aria-label="Amertha Home">
-  <Image
-    src="/images/mlstvff-logo-white.svg"
-    alt="Amertha"
-    width={120}
-    height={30}
-    priority
-  />
-</a>
-          <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label={menuOpen ? "Close menu" : "Open menu"}>
+            <Image
+              src="/images/mlstvff-logo-white.svg"
+              alt="Amertha"
+              width={120}
+              height={30}
+              priority
+            />
+          </a>
+          <button
+            className="menu-toggle"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+          >
             {menuOpen ? <X size={19} /> : <Menu size={19} />}
           </button>
           <nav className={menuOpen ? "nav-links nav-open" : "nav-links"}>
-            <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
-            <a href="/about" onClick={() => setMenuOpen(false)}>About</a>
-            <a href="#projects" onClick={() => setMenuOpen(false)}>Projects</a>
-            <a href="#experience" onClick={() => setMenuOpen(false)}>Experience</a>
-            <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
+            <a href="#home" onClick={() => setMenuOpen(false)}>
+              Home
+            </a>
+            <a href="/about" onClick={() => setMenuOpen(false)}>
+              About
+            </a>
+            <a href="#projects" onClick={() => setMenuOpen(false)}>
+              Projects
+            </a>
+            <a href="#experience" onClick={() => setMenuOpen(false)}>
+              Experience
+            </a>
+            <a href="/contact" onClick={() => setMenuOpen(false)}>
+              Contact
+            </a>
           </nav>
-          <div className="topbar-right"><a href="/contact">Let’s Discuss</a><a className="round-green" href="/contact" aria-label="Discuss a project"><ArrowUpRight size={14} /></a></div>
+          <div className="topbar-right">
+            <a href="/contact">Let’s Discuss</a>
+            <a
+              className="round-green"
+              href="/contact"
+              aria-label="Discuss a project"
+            >
+              <ArrowUpRight size={14} />
+            </a>
+          </div>
         </header>
 
         <div className="hero-content">
-
-<motion.h1
-  className="hero-logo-heading"
-  initial={{ opacity: 0, y: 25 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.8, ease: "easeOut" }}
->
-  <Image
-    src="/images/mlstvff-logo-white.svg"
-    alt="Amertha"
-    width={1036}
-    height={251}
-    priority
-    className="hero-logo-image"
-  />
-</motion.h1>
+          <motion.h1
+            className="hero-logo-heading"
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <Image
+              src="/images/mlstvff-logo-white.svg"
+              alt="Amertha"
+              width={1036}
+              height={251}
+              priority
+              className="hero-logo-image"
+            />
+          </motion.h1>
 
           {/*<a className="hero-down" href="#footer" aria-label="Scroll to about"><ArrowDown size={15} /></a>*/}
           <div className="hero-bottom">
             <div className="stats" aria-label="Portfolio overview">
-              <div><strong><CountUp value={projects.length} /></strong><span>Featured projects</span></div>
-              <div><strong><CountUp value={services.length} /></strong><span>Clients & Collaborations</span></div>
-              <div><strong><CountUp value={4} /></strong><span>Design stages</span></div>
+              <div>
+                <strong>
+                  <CountUp value={projects.length} />
+                </strong>
+                <span>Featured projects</span>
+              </div>
+              <div>
+                <strong>
+                  <CountUp value={services.length} />
+                </strong>
+                <span>Clients & Collaborations</span>
+              </div>
+              <div>
+                <strong>
+                  <CountUp value={4} />
+                </strong>
+                <span>Design stages</span>
+              </div>
             </div>
             <div className="hero-intro">
-              <p>Hi, I’m Maulana Akbar Kusuma, a UI/UX designer from Indonesia. I design clear, thoughtful digital experiences for websites, dashboards, and products.</p>
+              <p>
+                Hi, I’m Maulana Akbar Kusuma, a UI/UX designer from Indonesia. I
+                design clear, thoughtful digital experiences for websites,
+                dashboards, and products.
+              </p>
               <PillLink />
             </div>
           </div>
@@ -224,26 +399,33 @@ export default function Home() {
                   <h2>
                     <span>I craft thoughtful digital experiences that</span>
                     <span>turn bold ideas into clear, compelling,</span>
-                    <span className="about-headline-indented">and memorable brand</span>
-                    <span className="about-headline-indented">experiences built to truly</span>
+                    <span className="about-headline-indented">
+                      and memorable brand
+                    </span>
+                    <span className="about-headline-indented">
+                      experiences built to truly
+                    </span>
                     <span className="about-headline-indented">stand out.</span>
                   </h2>
                 </div>
               </div>
 
               <div className="about-lower">
-                <div className="about-visual about-visual-spacer" aria-hidden="true" />
+                <div
+                  className="about-visual about-visual-spacer"
+                  aria-hidden="true"
+                />
 
                 <div className="about-description">
                   <p>
-                    Amertha is an independent design practice by Maulana Akbar Kusuma,
-                    creating thoughtful digital experiences for businesses, founders,
-                    and individuals.
+                    Amertha is an independent design practice by Maulana Akbar
+                    Kusuma, creating thoughtful digital experiences for
+                    businesses, founders, and individuals.
                   </p>
 
                   <p className="about-description-secondary">
-                    From the first idea to the final interface, the focus is on making
-                    complex things feel clear, useful, and considered.
+                    From the first idea to the final interface, the focus is on
+                    making complex things feel clear, useful, and considered.
                   </p>
 
                   <div className="about-actions">
@@ -299,14 +481,31 @@ export default function Home() {
           <SectionMarker label="SELECTED WORK" />
           <div className="project-grid">
             {projects.map((project) => (
-              <article className={`project-card ${project.className}`} key={project.n}>
-                <a className="project-image" href={`/projects/${project.slug}`} aria-label={`View project details for ${project.title}`}>
-                  <Image src={imageUrl(project.image, 1400)} alt={project.alt} fill sizes="(max-width: 700px) 100vw, 50vw" />
-                  <span className="view-project">VIEW <ArrowUpRight size={12} /></span>
+              <article
+                className={`project-card ${project.className}`}
+                key={project.n}
+              >
+                <a
+                  className="project-image"
+                  href={`/projects/${project.slug}`}
+                  aria-label={`View project details for ${project.title}`}
+                >
+                  <Image
+                    src={imageUrl(project.image, 1400)}
+                    alt={project.alt}
+                    fill
+                    sizes="(max-width: 700px) 100vw, 50vw"
+                  />
+                  <span className="view-project">
+                    VIEW <ArrowUpRight size={12} />
+                  </span>
                 </a>
                 <div className="project-meta">
                   <span className="project-number">{project.n}</span>
-                  <div className="project-name"><strong>{project.title}</strong><span>{project.year}</span></div>
+                  <div className="project-name">
+                    <strong>{project.title}</strong>
+                    <span>{project.year}</span>
+                  </div>
                   <span className="project-category">{project.category}</span>
                 </div>
               </article>
@@ -314,67 +513,186 @@ export default function Home() {
           </div>
         </section>
 
-            
-<section className="experience-section section-pad" id="experience">
-  <div className="experience-grid">
-    <div className="experience-content">
-      <header className="experience-heading">
-        <h2>Experience</h2>
-        <p>A journey shaped by design, collaboration, and continuous learning.</p>
-      </header>
+        <section className="experience-section section-pad" id="experience">
+          <div className="experience-grid">
+            <div className="experience-content">
+              <header className="experience-heading">
+                <h2>Experience</h2>
+                <p>
+                  A journey shaped by design, collaboration, and continuous
+                  learning.
+                </p>
+              </header>
 
-      <div className="experience-list">
-        <article className="experience-item">
-          <div className="experience-role">UI/UX Designer</div>
-          <div className="experience-thumbnail" aria-hidden="true">
-            <Image src={imageUrl("photo-1557682250-33bd709cbe85", 800)} alt="Abstract blue gradient design" fill sizes="(max-width: 760px) 100vw, 24vw" />
-          </div>
-          <div className="experience-details">
-            <h3>Independent Practice</h3>
-            <span className="experience-year">2023 — Present</span>
-            <p>Leading design from early discovery through polished interface delivery—mapping user journeys, organizing information, and shaping clear website and product experiences around user and business needs.</p>
-          </div>
-        </article>
+              <div className="experience-list">
+                <article className="experience-item">
+                  <div className="experience-role">UI/UX Designer</div>
+                  <div className="experience-thumbnail" aria-hidden="true">
+                    <Image
+                      src={imageUrl("photo-1557682250-33bd709cbe85", 800)}
+                      alt="Abstract blue gradient design"
+                      fill
+                      sizes="(max-width: 760px) 100vw, 24vw"
+                    />
+                  </div>
 
-        <article className="experience-item">
-          <div className="experience-role">UI/UX Designer</div>
-          <div className="experience-thumbnail" aria-hidden="true">
-            <Image src={imageUrl("photo-1518770660439-4636190af475", 800)} alt="Abstract blue and violet digital artwork" fill sizes="(max-width: 760px) 100vw, 24vw" />
-          </div>
-          <div className="experience-details">
-            <h3>Independent Practice</h3>
-            <span className="experience-year">2023 — Present</span>
-            <p>Translating research, user needs, and project goals into user flows, wireframes, and high-fidelity screens. I focus on accessibility, clear hierarchy, and making important actions easy to find.</p>
-          </div>
-        </article>
+                  <div className="experience-details">
+                    <h3>Astronacci International</h3>
+                    <span className="experience-year">2024 — Present</span>
 
-        <article className="experience-item">
-          <div className="experience-role">UI/UX Designer</div>
-          <div className="experience-thumbnail" aria-hidden="true">
-            <Image src={imageUrl("photo-1531058020387-3be344556be6", 800)} alt="Abstract dark blue digital artwork" fill sizes="(max-width: 760px) 100vw, 24vw" />
-          </div>
-          <div className="experience-details">
-            <h3>Independent Practice</h3>
-            <span className="experience-year">2023 — Present</span>
-            <p>Designing responsive interfaces and reusable components that stay consistent across screens. I refine typography, spacing, interaction states, and visual details to make each experience feel cohesive and easy to use.</p>
-          </div>
-        </article>
+                    <ul className="experience-points">
+                      <li>
+                        Designed intuitive and user-centered UI/UX for web and
+                        mobile applications based on business and user
+                        requirements.
+                      </li>
+                      <li>
+                        Created wireframes, mockups, and high-fidelity
+                        prototypes using Figma.
+                      </li>
+                      <li>
+                        Collaborated with developers and stakeholders to ensure
+                        accurate design implementation.
+                      </li>
+                      <li>
+                        Designed engaging visual assets and Instagram feed
+                        content aligned with the company branding and marketing
+                        strategy.
+                      </li>
+                      <li>
+                        Maintained design consistency by applying design systems
+                        and visual guidelines across digital products.
+                      </li>
+                    </ul>
+                  </div>
+                </article>
 
-        <article className="experience-item">
-          <div className="experience-role">UI/UX Designer</div>
-          <div className="experience-thumbnail" aria-hidden="true">
-            <Image src={imageUrl("photo-1498050108023-c5249f4df085", 800)} alt="Abstract blue and purple visual composition" fill sizes="(max-width: 760px) 100vw, 24vw" />
+                <article className="experience-item">
+                  <div className="experience-role">UI/UX Designer</div>
+                  <div className="experience-thumbnail" aria-hidden="true">
+                    <Image
+                      src={imageUrl("photo-1518770660439-4636190af475", 800)}
+                      alt="Abstract blue and violet digital artwork"
+                      fill
+                      sizes="(max-width: 760px) 100vw, 24vw"
+                    />
+                  </div>
+                  <div className="experience-details">
+                    <h3>Astronacci International</h3>
+                    <span className="experience-year">2024 — Present</span>
+
+                    <ul className="experience-points">
+                      <li>
+                        Designed intuitive and user-centered UI/UX for web and
+                        mobile applications based on business and user
+                        requirements.
+                      </li>
+                      <li>
+                        Created wireframes, mockups, and high-fidelity
+                        prototypes using Figma.
+                      </li>
+                      <li>
+                        Collaborated with developers and stakeholders to ensure
+                        accurate design implementation.
+                      </li>
+                      <li>
+                        Designed engaging visual assets and Instagram feed
+                        content aligned with the company branding and marketing
+                        strategy.
+                      </li>
+                      <li>
+                        Maintained design consistency by applying design systems
+                        and visual guidelines across digital products.
+                      </li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article className="experience-item">
+                  <div className="experience-role">UI/UX Designer</div>
+                  <div className="experience-thumbnail" aria-hidden="true">
+                    <Image
+                      src={imageUrl("photo-1531058020387-3be344556be6", 800)}
+                      alt="Abstract dark blue digital artwork"
+                      fill
+                      sizes="(max-width: 760px) 100vw, 24vw"
+                    />
+                  </div>
+                  <div className="experience-details">
+                    <h3>Astronacci International</h3>
+                    <span className="experience-year">2024 — Present</span>
+
+                    <ul className="experience-points">
+                      <li>
+                        Designed intuitive and user-centered UI/UX for web and
+                        mobile applications based on business and user
+                        requirements.
+                      </li>
+                      <li>
+                        Created wireframes, mockups, and high-fidelity
+                        prototypes using Figma.
+                      </li>
+                      <li>
+                        Collaborated with developers and stakeholders to ensure
+                        accurate design implementation.
+                      </li>
+                      <li>
+                        Designed engaging visual assets and Instagram feed
+                        content aligned with the company branding and marketing
+                        strategy.
+                      </li>
+                      <li>
+                        Maintained design consistency by applying design systems
+                        and visual guidelines across digital products.
+                      </li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article className="experience-item">
+                  <div className="experience-role">UI/UX Designer</div>
+                  <div className="experience-thumbnail" aria-hidden="true">
+                    <Image
+                      src={imageUrl("photo-1498050108023-c5249f4df085", 800)}
+                      alt="Abstract blue and purple visual composition"
+                      fill
+                      sizes="(max-width: 760px) 100vw, 24vw"
+                    />
+                  </div>
+                  <div className="experience-details">
+                    <h3>Astronacci International</h3>
+                    <span className="experience-year">2024 — Present</span>
+
+                    <ul className="experience-points">
+                      <li>
+                        Designed intuitive and user-centered UI/UX for web and
+                        mobile applications based on business and user
+                        requirements.
+                      </li>
+                      <li>
+                        Created wireframes, mockups, and high-fidelity
+                        prototypes using Figma.
+                      </li>
+                      <li>
+                        Collaborated with developers and stakeholders to ensure
+                        accurate design implementation.
+                      </li>
+                      <li>
+                        Designed engaging visual assets and Instagram feed
+                        content aligned with the company branding and marketing
+                        strategy.
+                      </li>
+                      <li>
+                        Maintained design consistency by applying design systems
+                        and visual guidelines across digital products.
+                      </li>
+                    </ul>
+                  </div>
+                </article>
+              </div>
+            </div>
           </div>
-          <div className="experience-details">
-            <h3>Independent Practice</h3>
-            <span className="experience-year">2023 — Present</span>
-            <p>Building interactive prototypes in Figma, reviewing key flows, and refining designs through feedback. I also prepare organized components and handoff details to help developers implement the intended experience.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div>
-</section>
+        </section>
 
         {/*<section className="case-study section-pad" id="case-study">
           <Divider />
@@ -410,38 +728,82 @@ export default function Home() {
           <div className="process-heading">
             <div>
               <SectionMarker label="HOW I WORK" />
-              <h2>Design process<span>—</span><br />from insight to impact.</h2>
+              <h2>
+                Design process<span>—</span>
+                <br />
+                from insight to impact.
+              </h2>
             </div>
-            <p>Good design is more than how it looks. It starts with understanding the problem, exploring the right ideas, and refining the details that make a product easier to use.</p>
+            <p>
+              Good design is more than how it looks. It starts with
+              understanding the problem, exploring the right ideas, and refining
+              the details that make a product easier to use.
+            </p>
           </div>
           <div className="process-grid">
             <article className="process-card">
-              <div className="process-card-top"><span>01</span>{/*<span className="process-symbol">↗</span>*/}</div>
+              <div className="process-card-top">
+                <span>01</span>
+                {/*<span className="process-symbol">↗</span>*/}
+              </div>
               <h3>Discover</h3>
-              <p>Understand the people, goals, and challenges behind the product before jumping into solutions.</p>
-              <div className="process-output"><span>KEY OUTPUT</span><strong>Research & insights</strong></div>
+              <p>
+                Understand the people, goals, and challenges behind the product
+                before jumping into solutions.
+              </p>
+              <div className="process-output">
+                <span>KEY OUTPUT</span>
+                <strong>Research & insights</strong>
+              </div>
             </article>
             <article className="process-card">
-              <div className="process-card-top"><span>02</span>{/*<span className="process-symbol">⌁</span>*/}</div>
+              <div className="process-card-top">
+                <span>02</span>
+                {/*<span className="process-symbol">⌁</span>*/}
+              </div>
               <h3>Define</h3>
-              <p>Turn what we learn into a clear problem statement, user flows, and a focused product direction.</p>
-              <div className="process-output"><span>KEY OUTPUT</span><strong>Flows & structure</strong></div>
+              <p>
+                Turn what we learn into a clear problem statement, user flows,
+                and a focused product direction.
+              </p>
+              <div className="process-output">
+                <span>KEY OUTPUT</span>
+                <strong>Flows & structure</strong>
+              </div>
             </article>
             <article className="process-card process-card-featured">
-              <div className="process-card-top"><span>03</span>{/*<span className="process-symbol">✳</span>*/}</div>
+              <div className="process-card-top">
+                <span>03</span>
+                {/*<span className="process-symbol">✳</span>*/}
+              </div>
               <h3>Design</h3>
-              <p>Explore concepts and build a thoughtful interface with clear hierarchy, useful interactions, and a consistent visual language.</p>
-              <div className="process-output"><span>KEY OUTPUT</span><strong>UI & prototype</strong></div>
+              <p>
+                Explore concepts and build a thoughtful interface with clear
+                hierarchy, useful interactions, and a consistent visual
+                language.
+              </p>
+              <div className="process-output">
+                <span>KEY OUTPUT</span>
+                <strong>UI & prototype</strong>
+              </div>
             </article>
             <article className="process-card">
-              <div className="process-card-top"><span>04</span>{/*<span className="process-symbol">↻</span>*/}</div>
+              <div className="process-card-top">
+                <span>04</span>
+                {/*<span className="process-symbol">↻</span>*/}
+              </div>
               <h3>Validate & refine</h3>
-              <p>Test key journeys, learn from feedback, and refine the experience before handing it over for development.</p>
-              <div className="process-output"><span>KEY OUTPUT</span><strong>Tested handoff</strong></div>
+              <p>
+                Test key journeys, learn from feedback, and refine the
+                experience before handing it over for development.
+              </p>
+              <div className="process-output">
+                <span>KEY OUTPUT</span>
+                <strong>Tested handoff</strong>
+              </div>
             </article>
           </div>
         </section>
-
 
         {/*<section className="collaboration section-pad" id="collaboration">
           <Divider />
@@ -464,18 +826,41 @@ export default function Home() {
           <div className="faq-layout">
             <div className="faq-intro">
               <SectionMarker label="GOOD TO KNOW" />
-              <h2>Questions, <span>answered.</span></h2>
-              <p>A few things you might want to know before we start working together.</p>
-              <a className="faq-contact-link" href="/contact">Have another question? <span>Let’s talk <ArrowUpRight size={13} /></span></a>
+              <h2>
+                Questions, <span>answered.</span>
+              </h2>
+              <p>
+                A few things you might want to know before we start working
+                together.
+              </p>
+              <a className="faq-contact-link" href="/contact">
+                Have another question?{" "}
+                <span>
+                  Let’s talk <ArrowUpRight size={13} />
+                </span>
+              </a>
             </div>
             <div className="faq-list">
               {faqs.map((faq, index) => (
-                <article className={`faq-item ${openFaq === index ? "faq-item-open" : ""}`} key={faq.question}>
-                  <button className="faq-question" onClick={() => setOpenFaq(openFaq === index ? null : index)} aria-expanded={openFaq === index}>
+                <article
+                  className={`faq-item ${openFaq === index ? "faq-item-open" : ""}`}
+                  key={faq.question}
+                >
+                  <button
+                    className="faq-question"
+                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                    aria-expanded={openFaq === index}
+                  >
                     <span>{faq.question}</span>
-                    <span className="faq-toggle" aria-hidden="true">{openFaq === index ? "−" : "+"}</span>
+                    <span className="faq-toggle" aria-hidden="true">
+                      {openFaq === index ? "−" : "+"}
+                    </span>
                   </button>
-                  {openFaq === index && <div className="faq-answer"><p>{faq.answer}</p></div>}
+                  {openFaq === index && (
+                    <div className="faq-answer">
+                      <p>{faq.answer}</p>
+                    </div>
+                  )}
                 </article>
               ))}
             </div>
@@ -487,29 +872,82 @@ export default function Home() {
             <div className="footer-card">
               <div className="footer-top">
                 <div className="footer-about">
-                  
-<a className="brand footer-brand" href="#home" aria-label="MLSTVFF — Home">
-  <Image
-    src="/images/mlstvff-logo-black.svg"
-    alt="MLSTVFF"
-    width={180}
-    height={44}
-    className="footer-logo-image"
-  />
-</a>
+                  <a
+                    className="brand footer-brand"
+                    href="#home"
+                    aria-label="MLSTVFF — Home"
+                  >
+                    <Image
+                      src="/images/mlstvff-logo-black.svg"
+                      alt="MLSTVFF"
+                      width={180}
+                      height={44}
+                      className="footer-logo-image"
+                    />
+                  </a>
 
-                  <p>Turning ideas into clear, useful digital experiences through thoughtful UI/UX and product design.</p>
-                  <a className="pill-link footer-cv-link" href="/CV - Maulana Akbar Kusuma 2026 - English.pdf" download>Download CV <span className="pill-icon"><ArrowUpRight size={13} /></span></a>
+                  <p>
+                    Turning ideas into clear, useful digital experiences through
+                    thoughtful UI/UX and product design.
+                  </p>
+                  <a
+                    className="pill-link footer-cv-link"
+                    href="/CV - Maulana Akbar Kusuma 2026 - English.pdf"
+                    download
+                  >
+                    Download CV{" "}
+                    <span className="pill-icon">
+                      <ArrowUpRight size={13} />
+                    </span>
+                  </a>
                 </div>
                 <div className="footer-right-group">
-                  <div className="footer-links"><h4>Explore</h4><a href="#home">Home</a><a href="/about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="/contact">Contact</a></div>
-                  <div className="footer-connect"><h4>Let’s connect</h4><div><a href="https://dribbble.com/mlstvff" target="_blank" rel="noreferrer">Dribbble <ArrowUpRight size={12} /></a><a href="https://instagram.com/mlstvff" target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={12} /></a><a href="https://id.linkedin.com/in/maulstuff" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={12} /></a></div></div>
+                  <div className="footer-links">
+                    <h4>Explore</h4>
+                    <a href="#home">Home</a>
+                    <a href="/about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="/contact">Contact</a>
+                  </div>
+                  <div className="footer-connect">
+                    <h4>Let’s connect</h4>
+                    <div>
+                      <a
+                        href="https://dribbble.com/mlstvff"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Dribbble <ArrowUpRight size={12} />
+                      </a>
+                      <a
+                        href="https://instagram.com/mlstvff"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Instagram <ArrowUpRight size={12} />
+                      </a>
+                      <a
+                        href="https://id.linkedin.com/in/maulstuff"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        LinkedIn <ArrowUpRight size={12} />
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
-              
-              <div className="footer-bottom"><span>© {new Date().getFullYear()} Amertha. All rights reserved.</span></div>
+
+              <div className="footer-bottom">
+                <span>
+                  © {new Date().getFullYear()} Amertha. All rights reserved.
+                </span>
+              </div>
             </div>
-            <div className="footer-wordmark" aria-hidden="true">AMERTHA</div>
+            <div className="footer-wordmark" aria-hidden="true">
+              AMERTHA
+            </div>
           </div>
         </footer>
       </div>
