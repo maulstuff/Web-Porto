@@ -134,28 +134,6 @@ function SectionMarker({ label }: { label: string }) {
 }
 
 {
-  /*function AsteriskMark({ className = "" }: { className?: string }) {
-  return (
-    <svg
-      className={className}
-      viewBox="0 0 40 40"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-hidden="true"
-    >
-      <g
-        stroke="currentColor"
-        strokeWidth="2.5"
-        strokeLinecap="square"
-      >
-        <path d="M20 2V38" />
-        <path d="M2 20H38" />
-        <path d="M7.3 7.3L32.7 32.7" />
-        <path d="M32.7 7.3L7.3 32.7" />
-      </g>
-    </svg>
-  );
-} */
 }
 function Divider() {
   return <div className="section-divider" aria-hidden="true" />;
@@ -341,8 +319,6 @@ export default function Home() {
               className="hero-logo-image"
             />
           </motion.h1>
-
-          {/*<a className="hero-down" href="#footer" aria-label="Scroll to about"><ArrowDown size={15} /></a>*/}
           <div className="hero-bottom">
             <div className="stats" aria-label="Portfolio overview">
               <div>
@@ -445,40 +421,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/*<section className="services section-pad" id="services">
-          <Divider />
-          <SectionMarker label="SERVICES" />
-          <div className="services-grid">
-            {services.map((service) => (
-              <article
-                className={`service-card ${service.kind === "image" ? "service-image-card" : ""}`}
-                key={service.n}
-              >
-                {service.kind === "image" ? (
-                  <Image
-                    src={imageUrl("photo-1529139574466-a303027c1d8b", 900)}
-                    alt="Fashion editorial image used as a visual service card"
-                    fill
-                    sizes="(max-width: 700px) 100vw, 33vw"
-                  />
-                ) : (
-                  <>
-                    <div className="service-heading">
-                      <span>{service.n}</span>
-                      <h3>{service.title}</h3>
-                    </div>
-                    <p>{service.text}</p>
-                  </>
-                )}
-              </article>
-            ))}
-          </div>
-        </section> */}
-
         <section className="projects section-pad" id="projects">
           <Divider />
-          <SectionMarker label="SELECTED WORK" />
           <div className="project-grid">
             {projects.map((project) => (
               <article
@@ -693,41 +637,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/*<section className="case-study section-pad" id="case-study">
-          <Divider />
-          <div className="case-study-heading">
-            <div>
-              <SectionMarker label="FEATURED CASE STUDY" />
-              <h2>Making complex workflows feel <span>simple.</span></h2>
-            </div>
-            <p>A dashboard concept exploring how tasks, priorities, and progress can be organized into a clearer digital workspace.</p>
-          </div>
-          <article className="case-study-feature">
-            <a className="case-study-visual" href="/case-study" aria-label="Open the featured dashboard case study">
-              <Image src={imageUrl("photo-1498050108023-c5249f4df085", 1800)} alt="Workspace with a laptop showing a digital interface" fill sizes="(max-width: 700px) 100vw, 58vw" />
-              <span className="case-study-visual-label">DASHBOARD CONCEPT <ArrowUpRight size={14} /></span>
-            </a>
-            <div className="case-study-copy">
-              <div className="case-study-meta"><span>UI/UX DESIGN</span><span>CONCEPT STUDY</span></div>
-              <h3>Designing a more focused workspace</h3>
-              <p>The aim is to make important information easier to scan, help people understand what needs attention, and keep common actions within reach. This concept focuses on information hierarchy, task visibility, and a consistent interface system.</p>
-              <div className="case-study-details">
-                <div><span>01 / CHALLENGE</span><strong>Reduce visual noise</strong></div>
-                <div><span>02 / APPROACH</span><strong>Clarify hierarchy and flows</strong></div>
-                <div><span>03 / DESIGN FOCUS</span><strong>Dashboard UI and interaction</strong></div>
-              </div>
-              <a className="text-link" href="/case-study">Explore my process <ArrowUpRight size={13} /></a>
-            </div>
-          </article>
-          <p className="case-study-note">Concept presentation. Replace this example with a real project and verified process details before publishing.</p>
-        </section> */}
-
         <section className="process section-pad" id="process">
           <Divider />
           <div className="process-heading">
             <div>
-              <SectionMarker label="HOW I WORK" />
               <h2>
                 Design process<span>—</span>
                 <br />
@@ -804,28 +717,10 @@ export default function Home() {
             </article>
           </div>
         </section>
-
-        {/*<section className="collaboration section-pad" id="collaboration">
-          <Divider />
-          <div className="collaboration-heading">
-            <div>
-              <SectionMarker label="COLLABORATION" />
-              <h2>Good work comes from <span>good collaboration.</span></h2>
-            </div>
-            <p>A few principles I bring into a project, from the first conversation to the final handoff.</p>
-          </div>
-          <div className="collaboration-grid">
-            <article><span>01</span><h3>Clear communication</h3><p>Share context, align on goals, and keep decisions easy to follow throughout the process.</p></article>
-            <article><span>02</span><h3>Thoughtful decisions</h3><p>Choose solutions based on user needs and project goals, not decoration alone.</p></article>
-            <article><span>03</span><h3>Useful handoff</h3><p>Prepare organized components, interaction details, and notes that support implementation.</p></article>
-          </div>
-        </section> */}
-
         <section className="faq section-pad" id="faq">
           <Divider />
           <div className="faq-layout">
             <div className="faq-intro">
-              <SectionMarker label="GOOD TO KNOW" />
               <h2>
                 Questions, <span>answered.</span>
               </h2>
