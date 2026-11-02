@@ -239,7 +239,6 @@ export default async function ProjectDetail({
         </div>
       </section>
       <ProjectGallery projectTitle={project.title} />
-      {/* <section data-scroll-reveal className="detail-next"><p>HAVE A PROJECT IN MIND?</p><h2>Let’s make something meaningful.</h2><Link href="/contact">Let’s Discuss <span><ArrowUpRight size={16} /></span></Link></section> */}
       <section data-scroll-reveal className="about-page-cta">
         <p>HAVE A PROJECT IN MIND?</p>
         <h2>Let’s make something meaningful.</h2>
@@ -250,17 +249,6 @@ export default async function ProjectDetail({
               <ArrowUpRight size={25} strokeWidth={2} />
             </span>
           </a>
-
-          {/*<a
-    href="/CV - Maulana Akbar Kusuma 2026 - English.pdf"
-    download
-    className="about-cta-button about-cta-secondary"
-  >
-    <span>Download CV</span>
-    <span className="about-cta-icon">
-      <ArrowUpRight size={25} strokeWidth={2} />
-    </span>
-  </a> */}
         </div>
       </section>
       <Divider />

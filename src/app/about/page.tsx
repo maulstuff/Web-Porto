@@ -68,7 +68,6 @@ export default function AboutPage() {
 
       <section data-scroll-reveal className="about-page-hero">
         <p className="about-page-eyebrow">
-          <span /> A LITTLE ABOUT ME
         </p>
         <div className="about-page-hero-grid">
           <h1>
@@ -170,16 +169,6 @@ export default function AboutPage() {
               <ArrowUpRight size={25} strokeWidth={2} />
             </span>
           </a>
-          {/*<a
-    href="/CV - Maulana Akbar Kusuma 2026 - English.pdf"
-    download
-    className="about-cta-button about-cta-secondary"
-  >
-    <span>Download CV</span>
-    <span className="about-cta-icon">
-      <ArrowUpRight size={25} strokeWidth={2} />
-    </span>
-  </a> */}
         </div>
       </section>
       <Divider />

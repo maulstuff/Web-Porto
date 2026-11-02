@@ -275,9 +275,6 @@ export default function Home() {
             {menuOpen ? <X size={19} /> : <Menu size={19} />}
           </button>
           <nav className={menuOpen ? "nav-links nav-open" : "nav-links"}>
-            <a href="#home" onClick={() => setMenuOpen(false)}>
-              Home
-            </a>
             <a href="/about" onClick={() => setMenuOpen(false)}>
               About
             </a>
@@ -657,7 +654,6 @@ export default function Home() {
             <article className="process-card">
               <div className="process-card-top">
                 <span>01</span>
-                {/*<span className="process-symbol">↗</span>*/}
               </div>
               <h3>Discover</h3>
               <p>
@@ -672,7 +668,6 @@ export default function Home() {
             <article className="process-card">
               <div className="process-card-top">
                 <span>02</span>
-                {/*<span className="process-symbol">⌁</span>*/}
               </div>
               <h3>Define</h3>
               <p>
@@ -687,7 +682,6 @@ export default function Home() {
             <article className="process-card process-card-featured">
               <div className="process-card-top">
                 <span>03</span>
-                {/*<span className="process-symbol">✳</span>*/}
               </div>
               <h3>Design</h3>
               <p>
@@ -703,7 +697,6 @@ export default function Home() {
             <article className="process-card">
               <div className="process-card-top">
                 <span>04</span>
-                {/*<span className="process-symbol">↻</span>*/}
               </div>
               <h3>Validate & refine</h3>
               <p>
