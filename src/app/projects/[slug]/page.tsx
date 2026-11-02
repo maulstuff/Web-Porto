@@ -119,7 +119,6 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
         <Link className="detail-back" href="/#projects"><ArrowLeft size={15} /> All projects</Link>
       </header>
       <section data-scroll-reveal className="detail-hero">
-        <p className="detail-eyebrow"><span /> PROJECT CASE STUDY · {project.number} {project.category}</p>
         <h1>{project.title}</h1>
         <div className="detail-intro-row">
           <p className="detail-intro">{project.intro}</p>

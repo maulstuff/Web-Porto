@@ -101,7 +101,7 @@ export default function ContactPage() {
       12
     }
 
-    /></a> </div> </div> <div className="contact-availability"><span className="availability-dot"/><p>Open to discussing selected projects and opportunities.</p></div> </aside> <div className="contact-form-wrap"> <div className="contact-form-heading"> <p className="contact-label">START A CONVERSATION</p> <h2>Send me a message<span>✳</span></h2> <p>Share a few details and I’ll get back to you by email.</p> </div> <form className="contact-form"onSubmit= {
+    /></a> </div> </div> <div className="contact-availability"><span className="availability-dot"/><p>Open to discussing selected projects and opportunities.</p></div> </aside> <div className="contact-form-wrap"> <div className="contact-form-heading"> <p className="contact-label">START A CONVERSATION</p> <h2>Send me a message</h2> <p>Share a few details and I’ll get back to you by email.</p> </div> <form className="contact-form"onSubmit= {
       handleSubmit
     }
 
