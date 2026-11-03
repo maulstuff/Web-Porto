@@ -4831,21 +4831,11 @@ html.js-scroll-reveal .about-copy.scroll-reveal.is-revealed {
   background: #fff;
 
   /* Soft card shadow */
-  box-shadow:
-    0 2px 6px rgba(0, 0, 0, 0.025),
-    0 8px 24px rgba(0, 0, 0, 0.035);
-
   transition:
-    border-color 250ms ease,
-    box-shadow 250ms ease,
     transform 250ms ease;
 }
 
 .experience-item:hover {
-  border-color: #d8d8d8;
-  box-shadow:
-    0 4px 10px rgba(0, 0, 0, 0.035),
-    0 12px 28px rgba(0, 0, 0, 0.055);
   transform: translateY(-2px);
 }
 
@@ -4866,7 +4856,6 @@ html.js-scroll-reveal .about-copy.scroll-reveal.is-revealed {
   border: 3px solid #fff;
   border-radius: 50%;
   background: #2457f5;
-  box-shadow: 0 0 0 2px #e8edff;
 }
 
 /* Vertical line connecting the timeline dots */
@@ -5800,5 +5789,239 @@ html.js-scroll-reveal .about-copy.scroll-reveal.is-revealed {
   .experience-points li {
     font-size: 13px;
     line-height: 1.65;
+  }
+}
+
+/* =========================================================
+   EXPERIENCE — STACKING CARDS ON SCROLL
+   Appended override: keeps the current JSX structure intact.
+   ========================================================= */
+.experience-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.experience-section .experience-grid {
+  display: block;
+  width: 100%;
+}
+
+.experience-section .experience-content {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.experience-section .experience-heading {
+  margin: 0 0 clamp(28px, 4vw, 52px);
+}
+
+.experience-section .experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+  margin: 0;
+  padding: 0 0 8vh;
+}
+
+.experience-section .experience-item {
+  position: sticky;
+  display: grid;
+  grid-template-columns: minmax(150px, 18%) minmax(220px, 30%) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(18px, 2.5vw, 38px);
+  width: 100%;
+  min-height: 300px;
+  margin: 0;
+  padding: clamp(22px, 3vw, 38px);
+  border-radius: 18px;
+  background: #fff;
+  transform: none;
+}
+
+.experience-section .experience-item:nth-child(1) {
+  top: 92px;
+  z-index: 1;
+}
+.experience-section .experience-item:nth-child(2) {
+  top: 106px;
+  z-index: 2;
+}
+.experience-section .experience-item:nth-child(3) {
+  top: 120px;
+  z-index: 3;
+}
+.experience-section .experience-item:nth-child(4) {
+  top: 134px;
+  z-index: 4;
+}
+.experience-section .experience-item:hover {
+  border-color: #d9d9d9;
+  transform: none;
+}
+
+.experience-section .experience-role {
+  grid-column: 1;
+  grid-row: 1;
+  padding-top: 5px;
+  color: #777;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.experience-section .experience-thumbnail {
+  grid-column: 2;
+  grid-row: 1;
+  position: relative;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 1.75 / 1;
+  height: auto;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #eef0f5;
+}
+
+.experience-section .experience-thumbnail img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.experience-section .experience-details {
+  grid-column: 3;
+  grid-row: 1;
+  min-width: 0;
+  padding: 0;
+}
+
+.experience-section .experience-details h3 {
+  margin: 0 0 8px;
+  font-size: clamp(18px, 1.55vw, 23px);
+  line-height: 1.3;
+  font-weight: 550;
+  letter-spacing: -0.035em;
+}
+
+.experience-section .experience-details .experience-year {
+  display: block;
+  margin: 0 0 18px;
+  color: #888;
+  font-size: 12px;
+}
+
+.experience-section .experience-points {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 18px;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.experience-section .experience-points li {
+  padding-left: 2px;
+}
+
+@media (max-width: 760px) {
+  .experience-section .experience-heading {
+    margin-bottom: 26px;
+  }
+
+  .experience-section .experience-list {
+    gap: 18px;
+    padding-bottom: 6vh;
+  }
+
+  .experience-section .experience-item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    min-height: 0;
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .experience-section .experience-item:nth-child(1) { top: 76px; }
+  .experience-section .experience-item:nth-child(2) { top: 88px; }
+  .experience-section .experience-item:nth-child(3) { top: 100px; }
+  .experience-section .experience-item:nth-child(4) { top: 112px; }
+
+  .experience-section .experience-role {
+    grid-column: 1;
+    grid-row: 1;
+    padding: 0;
+  }
+
+  .experience-section .experience-thumbnail {
+    grid-column: 1;
+    grid-row: 2;
+    aspect-ratio: 1.7 / 1;
+    border-radius: 10px;
+  }
+
+  .experience-section .experience-details {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .experience-section .experience-details h3 {
+    font-size: 19px;
+  }
+
+  .experience-section .experience-points {
+    gap: 8px;
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .experience-section .experience-item {
+    position: relative;
+    top: auto !important;
+  }
+}
+
+
+/* Experience refinements: align role label with section heading and clean bullets */
+@media (min-width: 761px) {
+  .experience-section .experience-role {
+    margin-left: calc(-1 * clamp(22px, 3vw, 38px));
+  }
+}
+
+.experience-section .experience-points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.experience-section .experience-points li {
+  position: relative;
+  padding: 0 0 0 18px;
+  margin: 0;
+}
+
+.experience-section .experience-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.68em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #111;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 760px) {
+  .experience-section .experience-role {
+    margin-left: 0;
   }
 }
